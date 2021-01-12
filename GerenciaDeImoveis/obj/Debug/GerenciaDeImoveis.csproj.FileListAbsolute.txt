@@ -1,0 +1,10 @@
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\bin\Debug\GerenciaDeImoveis.exe.config
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\bin\Debug\GerenciaDeImoveis.exe
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\bin\Debug\GerenciaDeImoveis.pdb
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.csprojAssemblyReference.cache
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Form1.resources
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Properties.Resources.resources
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.csproj.GenerateResource.cache
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.csproj.CoreCompileInputs.cache
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.exe
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.pdb
