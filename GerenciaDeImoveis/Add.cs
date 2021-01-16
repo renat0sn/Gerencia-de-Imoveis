@@ -19,12 +19,58 @@ namespace GerenciaDeImoveis
         public Add()
         {
             InitializeComponent();
+            Text = "Adicionar";
             Images = new string[7];
         }
 
-        private void Add_FormClosed(object sender, FormClosedEventArgs e)
+        public Add(Imovel i)
         {
-            Owner.Enabled = true;
+            InitializeComponent();
+            Text = "Editar";
+            Images = new string[7];
+            for (int k = 0; k < 7; k++)
+            {
+                if (i.Fotos[k] != null)
+                {
+                    Button b = Controls.Find("btn" + k.ToString(), true)[0] as Button;
+                    b.BackgroundImage = ExifRotate(Image.FromFile(i.GetPathFoto(k)));
+                    b.BackgroundImageLayout = ImageLayout.Zoom;
+                    Images[k] = i.Fotos[k];
+                }
+            }
+
+            textBox_Endereco.Text = i.Endereco;
+            comboBox_Bairro.SelectedIndex = (int)i.Bairro;
+            textBox_Preco.Text = i.Preco.ToString("N2");
+            numericUpDown_Terreno.Value = i.Terreno;
+            numericUpDown_AreaConstruida.Value = i.AreaConstruida;
+            numericUpDown_Garagens.Value = i.nGaragens;
+            numericUpDown_Dormitorios.Value = i.nDormitorios;
+            if (i.Estilo == Estilo.Térreo)
+            {
+                radioButton_Terreo.Checked = true;
+            }
+            else
+            {
+                radioButton_Sobrado.Checked = true;
+            }
+            if (i.Status == Status.Moderno)
+            {
+                radioButton_Moderno.Checked = true;
+            }
+            else
+            {
+                radioButton_Reforma.Checked = true;
+            }
+            if (i.Indicacao == Indicacao.Propria)
+            {
+                radioButton_Propria.Checked = true;
+            }
+            else
+            {
+                radioButton_Ricardo.Checked = true;
+            }
+            richTextBox_Observacoes.Text = i.Observacoes;
         }
 
         private void textBox_Preco_Click(object sender, EventArgs e)
@@ -97,13 +143,19 @@ namespace GerenciaDeImoveis
                     radioButton_Propria.Checked ? Indicacao.Propria : Indicacao.Ricardo
                  );
 
-                if(MessageBox.Show("As informações estão corretas?\n\n" + Imovel.ToString(), "Finalizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                Home h = Owner as Home;
+                if (h.Imoveis.Any(im => im.Endereco == Imovel.Endereco) && this.Text == "Adicionar")
                 {
-                    Home h = Owner as Home;
-                    h.NovoBloco(Imovel);
+                    throw new Exception("Lista já possui imóvel com mesmo endereço.");
+                }
+
+                if (MessageBox.Show("As informações estão corretas?\n\n" + Imovel.ToString(), "Finalizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+
+                    DialogResult = DialogResult.OK;
                     Close();
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -121,14 +173,15 @@ namespace GerenciaDeImoveis
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 Button btn = sender as Button;
-                if(btn.Name == "btn3")
+                if (btn.Name == "btn3")
                 {
                     HabilitarBotoes();
                 }
                 btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
-                
+
                 Image im = Image.FromFile(openFile.FileName);
+                ExifRotate(im);
                 string path = openFile.FileName;
 
                 btn.BackgroundImage = im;
@@ -162,7 +215,7 @@ namespace GerenciaDeImoveis
         private void DesabilitarBotoes()
         {
 
-            btn0.Enabled = ExisteImagemNoBtn(btn0) ? true : false ;
+            btn0.Enabled = ExisteImagemNoBtn(btn0) ? true : false;
             btn1.Enabled = ExisteImagemNoBtn(btn1) ? true : false;
             btn2.Enabled = ExisteImagemNoBtn(btn2) ? true : false;
             btn4.Enabled = ExisteImagemNoBtn(btn4) ? true : false;
@@ -185,7 +238,7 @@ namespace GerenciaDeImoveis
             Button btn = sender as Button;
             int index = (int)char.GetNumericValue(btn.Name[3]);
 
-            if(Images[index] != null)
+            if (Images[index] != null)
             {
                 Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
                 btn.BackColor = Color.Transparent;
@@ -197,7 +250,7 @@ namespace GerenciaDeImoveis
         {
             Button btn = sender as Button;
             int index = (int)char.GetNumericValue(btn.Name[3]);
-            
+
             if (Images[index] != null)
             {
                 Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
@@ -211,17 +264,44 @@ namespace GerenciaDeImoveis
 
             if (ExisteImagemNoBtn(btn))
             {
-                if(MessageBox.Show("Deseja remover imagem?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja remover imagem?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     RemoverImagem(btn);
                     DesabilitarBotoes();
                 }
-                
+
             }
             else
             {
                 SelecionarImagem(sender, GetIndexBtn(btn.Name));
             }
+        }
+
+        private const int exifOrientationID = 0x112; //274
+
+        public static Image ExifRotate(Image img)
+        {
+            if (!img.PropertyIdList.Contains(exifOrientationID))
+                return img;
+
+            var prop = img.GetPropertyItem(exifOrientationID);
+            int val = BitConverter.ToUInt16(prop.Value, 0);
+            var rot = RotateFlipType.RotateNoneFlipNone;
+
+            if (val == 3 || val == 4)
+                rot = RotateFlipType.Rotate180FlipNone;
+            else if (val == 5 || val == 6)
+                rot = RotateFlipType.Rotate90FlipNone;
+            else if (val == 7 || val == 8)
+                rot = RotateFlipType.Rotate270FlipNone;
+
+            if (val == 2 || val == 4 || val == 5 || val == 7)
+                rot |= RotateFlipType.RotateNoneFlipX;
+
+            if (rot != RotateFlipType.RotateNoneFlipNone)
+                img.RotateFlip(rot);
+
+            return img;
         }
     }
 }

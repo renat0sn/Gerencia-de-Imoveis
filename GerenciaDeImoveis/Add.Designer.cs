@@ -1299,7 +1299,6 @@
             this.MinimizeBox = false;
             this.Name = "Add";
             this.Text = "Adicionar";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel_AreaInferior.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
