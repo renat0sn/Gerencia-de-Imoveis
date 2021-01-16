@@ -29,16 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lixo3 = new System.Windows.Forms.Button();
+            this.lixo2 = new System.Windows.Forms.Button();
+            this.lixo1 = new System.Windows.Forms.Button();
+            this.lixo5 = new System.Windows.Forms.Button();
+            this.lixo4 = new System.Windows.Forms.Button();
+            this.lixo6 = new System.Windows.Forms.Button();
+            this.lixo0 = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
             this.panel_AreaInferior = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Sobrado = new System.Windows.Forms.RadioButton();
+            this.radioButton_Terreo = new System.Windows.Forms.RadioButton();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
@@ -75,9 +85,6 @@
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Sobrado = new System.Windows.Forms.RadioButton();
-            this.radioButton_Terreo = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
@@ -94,21 +101,24 @@
             this.flowLayoutPanel25 = new System.Windows.Forms.FlowLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Reforma = new System.Windows.Forms.RadioButton();
-            this.radioButton_Moderno = new System.Windows.Forms.RadioButton();
+            this.button_Finalizar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.richTextBox_Observacoes = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton_Ricardo = new System.Windows.Forms.RadioButton();
             this.radioButton_Propria = new System.Windows.Forms.RadioButton();
-            this.richTextBox_Observacoes = new System.Windows.Forms.RichTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button_Finalizar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Reforma = new System.Windows.Forms.RadioButton();
+            this.radioButton_Moderno = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel_AreaInferior.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
@@ -128,7 +138,6 @@
             this.flowLayoutPanel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AreaConstruida)).BeginInit();
             this.flowLayoutPanel15.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
             this.flowLayoutPanel19.SuspendLayout();
             this.flowLayoutPanel20.SuspendLayout();
@@ -139,147 +148,284 @@
             this.flowLayoutPanel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Dormitorios)).BeginInit();
             this.flowLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lixo3);
+            this.panel1.Controls.Add(this.lixo2);
+            this.panel1.Controls.Add(this.lixo1);
+            this.panel1.Controls.Add(this.lixo5);
+            this.panel1.Controls.Add(this.lixo4);
+            this.panel1.Controls.Add(this.lixo6);
+            this.panel1.Controls.Add(this.lixo0);
+            this.panel1.Controls.Add(this.btn1);
+            this.panel1.Controls.Add(this.btn2);
+            this.panel1.Controls.Add(this.btn0);
+            this.panel1.Controls.Add(this.btn6);
+            this.panel1.Controls.Add(this.btn5);
+            this.panel1.Controls.Add(this.btn4);
+            this.panel1.Controls.Add(this.btn3);
             this.panel1.Location = new System.Drawing.Point(48, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(798, 251);
             this.panel1.TabIndex = 0;
             // 
-            // button5
+            // lixo3
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(130, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 100);
-            this.button5.TabIndex = 13;
-            this.button5.TabStop = false;
-            this.button5.UseVisualStyleBackColor = false;
+            this.lixo3.BackColor = System.Drawing.Color.Transparent;
+            this.lixo3.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo3.FlatAppearance.BorderSize = 0;
+            this.lixo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo3.Location = new System.Drawing.Point(384, 110);
+            this.lixo3.Name = "lixo3";
+            this.lixo3.Size = new System.Drawing.Size(32, 32);
+            this.lixo3.TabIndex = 21;
+            this.lixo3.UseVisualStyleBackColor = false;
+            this.lixo3.Visible = false;
             // 
-            // button7
+            // lixo2
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(130, 151);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 100);
-            this.button7.TabIndex = 12;
-            this.button7.TabStop = false;
-            this.button7.UseVisualStyleBackColor = false;
+            this.lixo2.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo2.FlatAppearance.BorderSize = 0;
+            this.lixo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo2.Location = new System.Drawing.Point(164, 185);
+            this.lixo2.Name = "lixo2";
+            this.lixo2.Size = new System.Drawing.Size(32, 32);
+            this.lixo2.TabIndex = 27;
+            this.lixo2.UseVisualStyleBackColor = true;
+            this.lixo2.Visible = false;
             // 
-            // button9
+            // lixo1
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 76);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 100);
-            this.button9.TabIndex = 10;
-            this.button9.TabStop = false;
-            this.button9.UseVisualStyleBackColor = false;
+            this.lixo1.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo1.FlatAppearance.BorderSize = 0;
+            this.lixo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo1.Location = new System.Drawing.Point(163, 34);
+            this.lixo1.Name = "lixo1";
+            this.lixo1.Size = new System.Drawing.Size(32, 32);
+            this.lixo1.TabIndex = 26;
+            this.lixo1.UseVisualStyleBackColor = true;
+            this.lixo1.Visible = false;
             // 
-            // button4
+            // lixo5
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(698, 76);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 100);
-            this.button4.TabIndex = 9;
-            this.button4.TabStop = false;
-            this.button4.UseVisualStyleBackColor = false;
+            this.lixo5.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo5.FlatAppearance.BorderSize = 0;
+            this.lixo5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo5.Location = new System.Drawing.Point(602, 185);
+            this.lixo5.Name = "lixo5";
+            this.lixo5.Size = new System.Drawing.Size(32, 32);
+            this.lixo5.TabIndex = 25;
+            this.lixo5.UseVisualStyleBackColor = true;
+            this.lixo5.Visible = false;
             // 
-            // button2
+            // lixo4
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(568, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 100);
-            this.button2.TabIndex = 7;
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = false;
+            this.lixo4.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo4.FlatAppearance.BorderSize = 0;
+            this.lixo4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo4.Location = new System.Drawing.Point(602, 34);
+            this.lixo4.Name = "lixo4";
+            this.lixo4.Size = new System.Drawing.Size(32, 32);
+            this.lixo4.TabIndex = 24;
+            this.lixo4.UseVisualStyleBackColor = true;
+            this.lixo4.Visible = false;
             // 
-            // button6
+            // lixo6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(275, 1);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(250, 250);
-            this.button6.TabIndex = 1;
-            this.button6.TabStop = false;
-            this.button6.UseVisualStyleBackColor = false;
+            this.lixo6.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo6.FlatAppearance.BorderSize = 0;
+            this.lixo6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo6.Location = new System.Drawing.Point(733, 110);
+            this.lixo6.Name = "lixo6";
+            this.lixo6.Size = new System.Drawing.Size(32, 32);
+            this.lixo6.TabIndex = 23;
+            this.lixo6.UseVisualStyleBackColor = true;
+            this.lixo6.Visible = false;
             // 
-            // button1
+            // lixo0
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(568, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
-            this.button1.TabIndex = 2;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = false;
+            this.lixo0.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
+            this.lixo0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lixo0.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixo0.FlatAppearance.BorderSize = 0;
+            this.lixo0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixo0.Location = new System.Drawing.Point(32, 110);
+            this.lixo0.Name = "lixo0";
+            this.lixo0.Size = new System.Drawing.Size(32, 32);
+            this.lixo0.TabIndex = 22;
+            this.lixo0.UseVisualStyleBackColor = true;
+            this.lixo0.Visible = false;
+            // 
+            // btn1
+            // 
+            this.btn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn1.BackColor = System.Drawing.Color.White;
+            this.btn1.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn1.Enabled = false;
+            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Location = new System.Drawing.Point(130, 0);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(100, 100);
+            this.btn1.TabIndex = 13;
+            this.btn1.TabStop = false;
+            this.btn1.Tag = "Img_Secundaria";
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn1.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn1.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn2
+            // 
+            this.btn2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn2.BackColor = System.Drawing.Color.White;
+            this.btn2.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn2.Enabled = false;
+            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Location = new System.Drawing.Point(130, 151);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(100, 100);
+            this.btn2.TabIndex = 12;
+            this.btn2.TabStop = false;
+            this.btn2.Tag = "Img_Secundaria";
+            this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn2.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn2.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn0
+            // 
+            this.btn0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn0.BackColor = System.Drawing.Color.White;
+            this.btn0.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn0.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn0.Enabled = false;
+            this.btn0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn0.Location = new System.Drawing.Point(0, 76);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(100, 100);
+            this.btn0.TabIndex = 10;
+            this.btn0.TabStop = false;
+            this.btn0.Tag = "Img_Secundaria";
+            this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn0.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn0.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn6
+            // 
+            this.btn6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn6.BackColor = System.Drawing.Color.White;
+            this.btn6.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn6.Enabled = false;
+            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Location = new System.Drawing.Point(698, 76);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(100, 100);
+            this.btn6.TabIndex = 9;
+            this.btn6.TabStop = false;
+            this.btn6.Tag = "Img_Secundaria";
+            this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn6.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn6.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn5
+            // 
+            this.btn5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn5.BackColor = System.Drawing.Color.White;
+            this.btn5.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn5.Enabled = false;
+            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Location = new System.Drawing.Point(568, 151);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(100, 100);
+            this.btn5.TabIndex = 7;
+            this.btn5.TabStop = false;
+            this.btn5.Tag = "Img_Secundaria";
+            this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn5.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn5.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn4
+            // 
+            this.btn4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn4.BackColor = System.Drawing.Color.White;
+            this.btn4.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn4.Enabled = false;
+            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Location = new System.Drawing.Point(568, 0);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(100, 100);
+            this.btn4.TabIndex = 2;
+            this.btn4.TabStop = false;
+            this.btn4.Tag = "Img_Secundaria";
+            this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn4.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn4.MouseLeave += new System.EventHandler(this.button_Leave);
+            // 
+            // btn3
+            // 
+            this.btn3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btn3.BackColor = System.Drawing.Color.White;
+            this.btn3.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
+            this.btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Location = new System.Drawing.Point(275, 1);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(250, 250);
+            this.btn3.TabIndex = 1;
+            this.btn3.TabStop = false;
+            this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
+            this.btn3.MouseEnter += new System.EventHandler(this.button_Hover);
+            this.btn3.MouseLeave += new System.EventHandler(this.button_Leave);
             // 
             // panel_AreaInferior
             // 
@@ -296,25 +442,74 @@
             this.panel_AreaInferior.Size = new System.Drawing.Size(909, 444);
             this.panel_AreaInferior.TabIndex = 1;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-7, -11);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(916, 76);
-            this.panel2.TabIndex = 2;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(450, 91);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(2, 355);
+            this.panel3.TabIndex = 9;
             // 
-            // pictureBox1
+            // groupBox1
             // 
-            this.pictureBox1.Image = global::GerenciaDeImoveis.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox1.Controls.Add(this.radioButton_Sobrado);
+            this.groupBox1.Controls.Add(this.radioButton_Terreo);
+            this.groupBox1.Font = new System.Drawing.Font("Gill Sans MT", 9F);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(473, 85);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Size = new System.Drawing.Size(355, 50);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Estilo";
+            // 
+            // radioButton_Sobrado
+            // 
+            this.radioButton_Sobrado.AutoSize = true;
+            this.radioButton_Sobrado.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.radioButton_Sobrado.Location = new System.Drawing.Point(182, 13);
+            this.radioButton_Sobrado.Name = "radioButton_Sobrado";
+            this.radioButton_Sobrado.Size = new System.Drawing.Size(91, 31);
+            this.radioButton_Sobrado.TabIndex = 1;
+            this.radioButton_Sobrado.Text = "Sobrado";
+            this.radioButton_Sobrado.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Terreo
+            // 
+            this.radioButton_Terreo.AutoSize = true;
+            this.radioButton_Terreo.Checked = true;
+            this.radioButton_Terreo.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.radioButton_Terreo.Location = new System.Drawing.Point(56, 13);
+            this.radioButton_Terreo.Name = "radioButton_Terreo";
+            this.radioButton_Terreo.Size = new System.Drawing.Size(83, 31);
+            this.radioButton_Terreo.TabIndex = 0;
+            this.radioButton_Terreo.TabStop = true;
+            this.radioButton_Terreo.Text = "Térreo";
+            this.radioButton_Terreo.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(50, 85);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.button_Finalizar);
+            this.splitContainer1.Panel2.Controls.Add(this.label16);
+            this.splitContainer1.Panel2.Controls.Add(this.richTextBox_Observacoes);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox3);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Size = new System.Drawing.Size(783, 346);
+            this.splitContainer1.SplitterDistance = 419;
+            this.splitContainer1.TabIndex = 8;
             // 
             // flowLayoutPanel1
             // 
@@ -623,7 +818,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 29);
             this.label10.TabIndex = 2;
-            this.label10.Text = "M²";
+            this.label10.Text = "m²";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel13
@@ -745,7 +940,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 29);
             this.label11.TabIndex = 2;
-            this.label11.Text = "M²";
+            this.label11.Text = "m²";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel15
@@ -775,46 +970,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(191, 30);
             this.textBox1.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox1.Controls.Add(this.radioButton_Sobrado);
-            this.groupBox1.Controls.Add(this.radioButton_Terreo);
-            this.groupBox1.Font = new System.Drawing.Font("Gill Sans MT", 9F);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(473, 85);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(355, 50);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Estilo";
-            // 
-            // radioButton_Sobrado
-            // 
-            this.radioButton_Sobrado.AutoSize = true;
-            this.radioButton_Sobrado.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.radioButton_Sobrado.Location = new System.Drawing.Point(182, 13);
-            this.radioButton_Sobrado.Name = "radioButton_Sobrado";
-            this.radioButton_Sobrado.Size = new System.Drawing.Size(91, 31);
-            this.radioButton_Sobrado.TabIndex = 1;
-            this.radioButton_Sobrado.Text = "Sobrado";
-            this.radioButton_Sobrado.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_Terreo
-            // 
-            this.radioButton_Terreo.AutoSize = true;
-            this.radioButton_Terreo.Checked = true;
-            this.radioButton_Terreo.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.radioButton_Terreo.Location = new System.Drawing.Point(56, 13);
-            this.radioButton_Terreo.Name = "radioButton_Terreo";
-            this.radioButton_Terreo.Size = new System.Drawing.Size(83, 31);
-            this.radioButton_Terreo.TabIndex = 0;
-            this.radioButton_Terreo.TabStop = true;
-            this.radioButton_Terreo.Text = "Térreo";
-            this.radioButton_Terreo.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel18
             // 
@@ -996,66 +1151,40 @@
             this.textBox4.Size = new System.Drawing.Size(191, 30);
             this.textBox4.TabIndex = 1;
             // 
-            // splitContainer1
+            // button_Finalizar
             // 
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(50, 85);
-            this.splitContainer1.Name = "splitContainer1";
+            this.button_Finalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button_Finalizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Finalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Finalizar.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.button_Finalizar.ForeColor = System.Drawing.Color.Black;
+            this.button_Finalizar.Location = new System.Drawing.Point(274, 306);
+            this.button_Finalizar.Name = "button_Finalizar";
+            this.button_Finalizar.Size = new System.Drawing.Size(83, 38);
+            this.button_Finalizar.TabIndex = 12;
+            this.button_Finalizar.Text = "Finalizar";
+            this.button_Finalizar.UseVisualStyleBackColor = false;
+            this.button_Finalizar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // splitContainer1.Panel1
+            // label16
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(-5, 163);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(109, 27);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Observações";
             // 
-            // splitContainer1.Panel2
+            // richTextBox_Observacoes
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button_Finalizar);
-            this.splitContainer1.Panel2.Controls.Add(this.label16);
-            this.splitContainer1.Panel2.Controls.Add(this.richTextBox_Observacoes);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(783, 346);
-            this.splitContainer1.SplitterDistance = 419;
-            this.splitContainer1.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.Controls.Add(this.radioButton_Reforma);
-            this.groupBox2.Controls.Add(this.radioButton_Moderno);
-            this.groupBox2.Font = new System.Drawing.Font("Gill Sans MT", 9F);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(0, 50);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox2.Size = new System.Drawing.Size(355, 50);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Status";
-            // 
-            // radioButton_Reforma
-            // 
-            this.radioButton_Reforma.AutoSize = true;
-            this.radioButton_Reforma.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.radioButton_Reforma.Location = new System.Drawing.Point(182, 12);
-            this.radioButton_Reforma.Name = "radioButton_Reforma";
-            this.radioButton_Reforma.Size = new System.Drawing.Size(170, 31);
-            this.radioButton_Reforma.TabIndex = 1;
-            this.radioButton_Reforma.Text = "Precisa de reforma";
-            this.radioButton_Reforma.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_Moderno
-            // 
-            this.radioButton_Moderno.AutoSize = true;
-            this.radioButton_Moderno.Checked = true;
-            this.radioButton_Moderno.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.radioButton_Moderno.Location = new System.Drawing.Point(56, 12);
-            this.radioButton_Moderno.Name = "radioButton_Moderno";
-            this.radioButton_Moderno.Size = new System.Drawing.Size(98, 31);
-            this.radioButton_Moderno.TabIndex = 0;
-            this.radioButton_Moderno.TabStop = true;
-            this.radioButton_Moderno.Text = "Moderno";
-            this.radioButton_Moderno.UseVisualStyleBackColor = true;
+            this.richTextBox_Observacoes.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.richTextBox_Observacoes.Location = new System.Drawing.Point(0, 194);
+            this.richTextBox_Observacoes.Name = "richTextBox_Observacoes";
+            this.richTextBox_Observacoes.Size = new System.Drawing.Size(355, 97);
+            this.richTextBox_Observacoes.TabIndex = 10;
+            this.richTextBox_Observacoes.Text = "";
             // 
             // groupBox3
             // 
@@ -1097,48 +1226,65 @@
             this.radioButton_Propria.Text = "Própria";
             this.radioButton_Propria.UseVisualStyleBackColor = true;
             // 
-            // richTextBox_Observacoes
+            // groupBox2
             // 
-            this.richTextBox_Observacoes.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.richTextBox_Observacoes.Location = new System.Drawing.Point(0, 194);
-            this.richTextBox_Observacoes.Name = "richTextBox_Observacoes";
-            this.richTextBox_Observacoes.Size = new System.Drawing.Size(355, 97);
-            this.richTextBox_Observacoes.TabIndex = 10;
-            this.richTextBox_Observacoes.Text = "";
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox2.Controls.Add(this.radioButton_Reforma);
+            this.groupBox2.Controls.Add(this.radioButton_Moderno);
+            this.groupBox2.Font = new System.Drawing.Font("Gill Sans MT", 9F);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(0, 50);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox2.Size = new System.Drawing.Size(355, 50);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Status";
             // 
-            // label16
+            // radioButton_Reforma
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(-5, 163);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 27);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Observações";
+            this.radioButton_Reforma.AutoSize = true;
+            this.radioButton_Reforma.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.radioButton_Reforma.Location = new System.Drawing.Point(182, 12);
+            this.radioButton_Reforma.Name = "radioButton_Reforma";
+            this.radioButton_Reforma.Size = new System.Drawing.Size(170, 31);
+            this.radioButton_Reforma.TabIndex = 1;
+            this.radioButton_Reforma.Text = "Precisa de reforma";
+            this.radioButton_Reforma.UseVisualStyleBackColor = true;
             // 
-            // button_Finalizar
+            // radioButton_Moderno
             // 
-            this.button_Finalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button_Finalizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Finalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Finalizar.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.button_Finalizar.ForeColor = System.Drawing.Color.Black;
-            this.button_Finalizar.Location = new System.Drawing.Point(274, 306);
-            this.button_Finalizar.Name = "button_Finalizar";
-            this.button_Finalizar.Size = new System.Drawing.Size(83, 38);
-            this.button_Finalizar.TabIndex = 12;
-            this.button_Finalizar.Text = "Finalizar";
-            this.button_Finalizar.UseVisualStyleBackColor = false;
-            this.button_Finalizar.Click += new System.EventHandler(this.button3_Click);
+            this.radioButton_Moderno.AutoSize = true;
+            this.radioButton_Moderno.Checked = true;
+            this.radioButton_Moderno.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.radioButton_Moderno.Location = new System.Drawing.Point(56, 12);
+            this.radioButton_Moderno.Name = "radioButton_Moderno";
+            this.radioButton_Moderno.Size = new System.Drawing.Size(98, 31);
+            this.radioButton_Moderno.TabIndex = 0;
+            this.radioButton_Moderno.TabStop = true;
+            this.radioButton_Moderno.Text = "Moderno";
+            this.radioButton_Moderno.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(450, 91);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 355);
-            this.panel3.TabIndex = 9;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(-7, -11);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(916, 76);
+            this.panel2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GerenciaDeImoveis.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(348, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Add
             // 
@@ -1156,8 +1302,13 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Add_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel_AreaInferior.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
@@ -1189,8 +1340,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AreaConstruida)).EndInit();
             this.flowLayoutPanel15.ResumeLayout(false);
             this.flowLayoutPanel15.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.flowLayoutPanel18.ResumeLayout(false);
             this.flowLayoutPanel19.ResumeLayout(false);
             this.flowLayoutPanel19.PerformLayout();
@@ -1205,15 +1354,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Dormitorios)).EndInit();
             this.flowLayoutPanel25.ResumeLayout(false);
             this.flowLayoutPanel25.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1221,14 +1367,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Panel panel_AreaInferior;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -1297,5 +1443,12 @@
         private System.Windows.Forms.RichTextBox richTextBox_Observacoes;
         private System.Windows.Forms.Button button_Finalizar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button lixo2;
+        private System.Windows.Forms.Button lixo1;
+        private System.Windows.Forms.Button lixo5;
+        private System.Windows.Forms.Button lixo4;
+        private System.Windows.Forms.Button lixo6;
+        private System.Windows.Forms.Button lixo0;
+        private System.Windows.Forms.Button lixo3;
     }
 }

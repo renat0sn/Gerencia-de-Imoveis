@@ -15,9 +15,11 @@ namespace GerenciaDeImoveis
     public partial class Add : Form
     {
         public Imovel Imovel { get; set; }
+        public string[] Images { get; set; }
         public Add()
         {
             InitializeComponent();
+            Images = new string[7];
         }
 
         private void Add_FormClosed(object sender, FormClosedEventArgs e)
@@ -81,9 +83,10 @@ namespace GerenciaDeImoveis
                 }
 
                 Imovel = new Imovel(
+                    Images,
                     textBox_Endereco.Text,
                     (Bairro)comboBox_Bairro.SelectedIndex,
-                    double.Parse(textBox_Preco.Text.Replace(",", "").Replace(".", "")),
+                    double.Parse(textBox_Preco.Text),
                     decimal.ToInt32(numericUpDown_Terreno.Value),
                     decimal.ToInt32(numericUpDown_AreaConstruida.Value),
                     decimal.ToInt32(numericUpDown_Garagens.Value),
@@ -94,17 +97,130 @@ namespace GerenciaDeImoveis
                     radioButton_Propria.Checked ? Indicacao.Propria : Indicacao.Ricardo
                  );
 
-                DialogResult = MessageBox.Show("As informações estão corretas?\n\n" + Imovel.ToString(), "Finalizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-
-                if (DialogResult == DialogResult.Yes)
+                if(MessageBox.Show("As informações estão corretas?\n\n" + Imovel.ToString(), "Finalizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    Home h = Owner as Home;
+                    h.NovoBloco(Imovel);
                     Close();
                 }
+                
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro! " + ex.Message, "Erro de entrada");
+            }
+        }
+
+        private void SelecionarImagem(object sender, int key)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFile.Filter = "Arquivos de imagem(*.jpg;*.png)|*.jpg;*.png|All files (*.*)|*.*";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                Button btn = sender as Button;
+                if(btn.Name == "btn3")
+                {
+                    HabilitarBotoes();
+                }
+                btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                btn.BackgroundImageLayout = ImageLayout.Zoom;
+                
+                Image im = Image.FromFile(openFile.FileName);
+                string path = openFile.FileName;
+
+                btn.BackgroundImage = im;
+
+                Images[key] = "img" + key.ToString() + path;
+            }
+        }
+
+        private void RemoverImagem(Button btn)
+        {
+            int index = GetIndexBtn(btn.Name);
+
+            Images[index] = null;
+            btn.BackgroundImageLayout = ImageLayout.Center;
+            btn.BackgroundImage = Properties.Resources.mais32px_;
+            Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
+            b.Visible = false;
+        }
+
+        private int GetIndexBtn(string m)
+        {
+            return (int)char.GetNumericValue(m[3]);
+        }
+
+        private bool ExisteImagemNoBtn(Button b)
+        {
+            int index = GetIndexBtn(b.Name);
+            return Images[index] != null;
+        }
+
+        private void DesabilitarBotoes()
+        {
+
+            btn0.Enabled = ExisteImagemNoBtn(btn0) ? true : false ;
+            btn1.Enabled = ExisteImagemNoBtn(btn1) ? true : false;
+            btn2.Enabled = ExisteImagemNoBtn(btn2) ? true : false;
+            btn4.Enabled = ExisteImagemNoBtn(btn4) ? true : false;
+            btn5.Enabled = ExisteImagemNoBtn(btn5) ? true : false;
+            btn6.Enabled = ExisteImagemNoBtn(btn6) ? true : false;
+        }
+
+        private void HabilitarBotoes()
+        {
+            btn0.Enabled = true;
+            btn1.Enabled = true;
+            btn2.Enabled = true;
+            btn4.Enabled = true;
+            btn5.Enabled = true;
+            btn6.Enabled = true;
+        }
+
+        private void button_Hover(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int index = (int)char.GetNumericValue(btn.Name[3]);
+
+            if(Images[index] != null)
+            {
+                Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
+                btn.BackColor = Color.Transparent;
+                b.Visible = true;
+            }
+        }
+
+        private void button_Leave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int index = (int)char.GetNumericValue(btn.Name[3]);
+            
+            if (Images[index] != null)
+            {
+                Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
+                b.Visible = false;
+            }
+        }
+
+        private void button_Click(object sender, MouseEventArgs e)
+        {
+            Button btn = sender as Button;
+
+            if (ExisteImagemNoBtn(btn))
+            {
+                if(MessageBox.Show("Deseja remover imagem?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    RemoverImagem(btn);
+                    DesabilitarBotoes();
+                }
+                
+            }
+            else
+            {
+                SelecionarImagem(sender, GetIndexBtn(btn.Name));
             }
         }
     }
