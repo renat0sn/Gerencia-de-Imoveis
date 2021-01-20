@@ -6,8 +6,9 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
+using GerenciaDeImoveis.Database;
 using System.Windows.Forms;
 
 namespace GerenciaDeImoveis
@@ -20,17 +21,17 @@ namespace GerenciaDeImoveis
         {
             InitializeComponent();
             Text = "Adicionar";
-            Images = new string[7];
+            Images = new string[7] { "", "", "", "", "", "", "" };
         }
 
         public Add(Imovel i)
         {
             InitializeComponent();
             Text = "Editar";
-            Images = new string[7];
+            Images = new string[7] { "", "", "", "", "", "", "" };
             for (int k = 0; k < 7; k++)
             {
-                if (i.Fotos[k] != null)
+                if (i.Fotos[k] != "")
                 {
                     Button b = Controls.Find("btn" + k.ToString(), true)[0] as Button;
                     b.BackgroundImage = ExifRotate(Image.FromFile(i.GetPathFoto(k)));
@@ -38,6 +39,16 @@ namespace GerenciaDeImoveis
                     Images[k] = i.Fotos[k];
                 }
             }
+
+            if (i.Fotos[3] != "")
+            {
+                HabilitarBotoes();
+            }
+            else
+            {
+                DesabilitarBotoes();
+            }
+            
 
             textBox_Endereco.Text = i.Endereco;
             comboBox_Bairro.SelectedIndex = (int)i.Bairro;
@@ -137,14 +148,14 @@ namespace GerenciaDeImoveis
                     decimal.ToInt32(numericUpDown_AreaConstruida.Value),
                     decimal.ToInt32(numericUpDown_Garagens.Value),
                     decimal.ToInt32(numericUpDown_Dormitorios.Value),
-                    richTextBox_Observacoes.Text,
+                    richTextBox_Observacoes.Text.Replace("\n", @"\n"),
                     radioButton_Terreo.Checked ? Estilo.Térreo : Estilo.Sobrado,
                     radioButton_Moderno.Checked ? Status.Moderno : Status.Precisa_de_reforma,
                     radioButton_Propria.Checked ? Indicacao.Propria : Indicacao.Ricardo
                  );
 
                 Home h = Owner as Home;
-                if (h.Imoveis.Any(im => im.Endereco == Imovel.Endereco) && this.Text == "Adicionar")
+                if (h.Imoveis.Any(im => im.Endereco == Imovel.Endereco) && Text == "Adicionar")
                 {
                     throw new Exception("Lista já possui imóvel com mesmo endereço.");
                 }
@@ -180,10 +191,11 @@ namespace GerenciaDeImoveis
                 btn.FlatAppearance.MouseOverBackColor = Color.Transparent;
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
 
-                Image im = Image.FromFile(openFile.FileName);
+                string path = CopiarImg(openFile.FileName);
+                Image im = Image.FromFile(path);
+                
                 ExifRotate(im);
-                string path = openFile.FileName;
-
+                
                 btn.BackgroundImage = im;
 
                 Images[key] = "img" + key.ToString() + path;
@@ -194,7 +206,7 @@ namespace GerenciaDeImoveis
         {
             int index = GetIndexBtn(btn.Name);
 
-            Images[index] = null;
+            Images[index] = "";
             btn.BackgroundImageLayout = ImageLayout.Center;
             btn.BackgroundImage = Properties.Resources.mais32px_;
             Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
@@ -209,7 +221,7 @@ namespace GerenciaDeImoveis
         private bool ExisteImagemNoBtn(Button b)
         {
             int index = GetIndexBtn(b.Name);
-            return Images[index] != null;
+            return Images[index] != "";
         }
 
         private void DesabilitarBotoes()
@@ -238,7 +250,7 @@ namespace GerenciaDeImoveis
             Button btn = sender as Button;
             int index = (int)char.GetNumericValue(btn.Name[3]);
 
-            if (Images[index] != null)
+            if (Images[index] != "")
             {
                 Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
                 btn.BackColor = Color.Transparent;
@@ -251,7 +263,7 @@ namespace GerenciaDeImoveis
             Button btn = sender as Button;
             int index = (int)char.GetNumericValue(btn.Name[3]);
 
-            if (Images[index] != null)
+            if (Images[index] != "")
             {
                 Button b = Controls.Find("lixo" + index.ToString(), true)[0] as Button;
                 b.Visible = false;
@@ -302,6 +314,19 @@ namespace GerenciaDeImoveis
                 img.RotateFlip(rot);
 
             return img;
+        }
+
+        public string CopiarImg(string origem)
+        {
+            string name = Path.GetFileName(origem);
+            string destino = Path.Combine((Owner as Home).File.Diretorio.FullName, name);
+
+            if (!File.Exists(destino))
+            {
+                File.Copy(origem, destino);
+            }
+
+            return destino;
         }
     }
 }

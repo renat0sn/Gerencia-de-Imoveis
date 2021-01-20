@@ -777,11 +777,6 @@
             // 
             this.numericUpDown_Terreno.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.numericUpDown_Terreno.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.numericUpDown_Terreno.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.numericUpDown_Terreno.Location = new System.Drawing.Point(0, 0);
             this.numericUpDown_Terreno.Margin = new System.Windows.Forms.Padding(0);
             this.numericUpDown_Terreno.Maximum = new decimal(new int[] {
@@ -899,11 +894,6 @@
             // 
             this.numericUpDown_AreaConstruida.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.numericUpDown_AreaConstruida.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.numericUpDown_AreaConstruida.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.numericUpDown_AreaConstruida.Location = new System.Drawing.Point(0, 0);
             this.numericUpDown_AreaConstruida.Margin = new System.Windows.Forms.Padding(0);
             this.numericUpDown_AreaConstruida.Maximum = new decimal(new int[] {

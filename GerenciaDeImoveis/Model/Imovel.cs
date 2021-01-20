@@ -23,7 +23,7 @@ namespace GerenciaDeImoveis.Model
 
         public Imovel(string[] fotos, string endereco, Bairro bairro, double preco, int terreno, int areaConstruida, int nGaragens, int nDormitorios, string observacoes, Estilo estilo, Status status, Indicacao indicacao)
         {
-            Fotos = new string[7];
+            Fotos = new string[7] { "", "", "", "", "", "", "" };
             Fotos = fotos;
             Endereco = endereco;
             Bairro = bairro;
@@ -40,7 +40,7 @@ namespace GerenciaDeImoveis.Model
 
         public string GetPathFoto(int index)
         {
-            return Fotos[index].Substring(4);
+            return Fotos[index].Equals("") ? "" : Fotos[index].Substring(4);
         }
 
         public string GetFotos()
@@ -48,7 +48,7 @@ namespace GerenciaDeImoveis.Model
             string dir = "";
             for(int i = 0; i<Fotos.Length; i++)
             {
-                dir += Fotos[i] != null? (Fotos[i].Substring(4) + "\n") : "";
+                dir += Fotos[i] != "" ? (Fotos[i].Substring(4) + "\n") : "";
             }
             return dir;
         }

@@ -9,3 +9,4 @@ C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\Geren
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.pdb
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Home.resources
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Add.resources
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Detalhes.resources
