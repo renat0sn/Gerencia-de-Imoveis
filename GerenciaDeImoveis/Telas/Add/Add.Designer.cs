@@ -28,21 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lixo3 = new System.Windows.Forms.Button();
-            this.lixo2 = new System.Windows.Forms.Button();
-            this.lixo1 = new System.Windows.Forms.Button();
-            this.lixo5 = new System.Windows.Forms.Button();
-            this.lixo4 = new System.Windows.Forms.Button();
-            this.lixo6 = new System.Windows.Forms.Button();
-            this.lixo0 = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
             this.panel_AreaInferior = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -112,7 +97,6 @@
             this.radioButton_Moderno = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             this.panel_AreaInferior.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -154,279 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lixo3);
-            this.panel1.Controls.Add(this.lixo2);
-            this.panel1.Controls.Add(this.lixo1);
-            this.panel1.Controls.Add(this.lixo5);
-            this.panel1.Controls.Add(this.lixo4);
-            this.panel1.Controls.Add(this.lixo6);
-            this.panel1.Controls.Add(this.lixo0);
-            this.panel1.Controls.Add(this.btn1);
-            this.panel1.Controls.Add(this.btn2);
-            this.panel1.Controls.Add(this.btn0);
-            this.panel1.Controls.Add(this.btn6);
-            this.panel1.Controls.Add(this.btn5);
-            this.panel1.Controls.Add(this.btn4);
-            this.panel1.Controls.Add(this.btn3);
-            this.panel1.Location = new System.Drawing.Point(48, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 251);
-            this.panel1.TabIndex = 0;
-            // 
-            // lixo3
-            // 
-            this.lixo3.BackColor = System.Drawing.Color.Transparent;
-            this.lixo3.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo3.FlatAppearance.BorderSize = 0;
-            this.lixo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo3.Location = new System.Drawing.Point(384, 110);
-            this.lixo3.Name = "lixo3";
-            this.lixo3.Size = new System.Drawing.Size(32, 32);
-            this.lixo3.TabIndex = 21;
-            this.lixo3.UseVisualStyleBackColor = false;
-            this.lixo3.Visible = false;
-            // 
-            // lixo2
-            // 
-            this.lixo2.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo2.FlatAppearance.BorderSize = 0;
-            this.lixo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo2.Location = new System.Drawing.Point(164, 185);
-            this.lixo2.Name = "lixo2";
-            this.lixo2.Size = new System.Drawing.Size(32, 32);
-            this.lixo2.TabIndex = 27;
-            this.lixo2.UseVisualStyleBackColor = true;
-            this.lixo2.Visible = false;
-            // 
-            // lixo1
-            // 
-            this.lixo1.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo1.FlatAppearance.BorderSize = 0;
-            this.lixo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo1.Location = new System.Drawing.Point(163, 34);
-            this.lixo1.Name = "lixo1";
-            this.lixo1.Size = new System.Drawing.Size(32, 32);
-            this.lixo1.TabIndex = 26;
-            this.lixo1.UseVisualStyleBackColor = true;
-            this.lixo1.Visible = false;
-            // 
-            // lixo5
-            // 
-            this.lixo5.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo5.FlatAppearance.BorderSize = 0;
-            this.lixo5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo5.Location = new System.Drawing.Point(602, 185);
-            this.lixo5.Name = "lixo5";
-            this.lixo5.Size = new System.Drawing.Size(32, 32);
-            this.lixo5.TabIndex = 25;
-            this.lixo5.UseVisualStyleBackColor = true;
-            this.lixo5.Visible = false;
-            // 
-            // lixo4
-            // 
-            this.lixo4.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo4.FlatAppearance.BorderSize = 0;
-            this.lixo4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo4.Location = new System.Drawing.Point(602, 34);
-            this.lixo4.Name = "lixo4";
-            this.lixo4.Size = new System.Drawing.Size(32, 32);
-            this.lixo4.TabIndex = 24;
-            this.lixo4.UseVisualStyleBackColor = true;
-            this.lixo4.Visible = false;
-            // 
-            // lixo6
-            // 
-            this.lixo6.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo6.FlatAppearance.BorderSize = 0;
-            this.lixo6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo6.Location = new System.Drawing.Point(733, 110);
-            this.lixo6.Name = "lixo6";
-            this.lixo6.Size = new System.Drawing.Size(32, 32);
-            this.lixo6.TabIndex = 23;
-            this.lixo6.UseVisualStyleBackColor = true;
-            this.lixo6.Visible = false;
-            // 
-            // lixo0
-            // 
-            this.lixo0.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lixo;
-            this.lixo0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lixo0.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixo0.FlatAppearance.BorderSize = 0;
-            this.lixo0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixo0.Location = new System.Drawing.Point(32, 110);
-            this.lixo0.Name = "lixo0";
-            this.lixo0.Size = new System.Drawing.Size(32, 32);
-            this.lixo0.TabIndex = 22;
-            this.lixo0.UseVisualStyleBackColor = true;
-            this.lixo0.Visible = false;
-            // 
-            // btn1
-            // 
-            this.btn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn1.BackColor = System.Drawing.Color.White;
-            this.btn1.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn1.Enabled = false;
-            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Location = new System.Drawing.Point(130, 0);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(100, 100);
-            this.btn1.TabIndex = 13;
-            this.btn1.TabStop = false;
-            this.btn1.Tag = "Img_Secundaria";
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn1.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn1.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn2
-            // 
-            this.btn2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn2.BackColor = System.Drawing.Color.White;
-            this.btn2.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn2.Enabled = false;
-            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.Location = new System.Drawing.Point(130, 151);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(100, 100);
-            this.btn2.TabIndex = 12;
-            this.btn2.TabStop = false;
-            this.btn2.Tag = "Img_Secundaria";
-            this.btn2.UseVisualStyleBackColor = false;
-            this.btn2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn2.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn2.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn0
-            // 
-            this.btn0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn0.BackColor = System.Drawing.Color.White;
-            this.btn0.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn0.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn0.Enabled = false;
-            this.btn0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn0.Location = new System.Drawing.Point(0, 76);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(100, 100);
-            this.btn0.TabIndex = 10;
-            this.btn0.TabStop = false;
-            this.btn0.Tag = "Img_Secundaria";
-            this.btn0.UseVisualStyleBackColor = false;
-            this.btn0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn0.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn0.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn6
-            // 
-            this.btn6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn6.BackColor = System.Drawing.Color.White;
-            this.btn6.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn6.Enabled = false;
-            this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6.Location = new System.Drawing.Point(698, 76);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(100, 100);
-            this.btn6.TabIndex = 9;
-            this.btn6.TabStop = false;
-            this.btn6.Tag = "Img_Secundaria";
-            this.btn6.UseVisualStyleBackColor = false;
-            this.btn6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn6.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn6.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn5
-            // 
-            this.btn5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn5.BackColor = System.Drawing.Color.White;
-            this.btn5.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn5.Enabled = false;
-            this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5.Location = new System.Drawing.Point(568, 151);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(100, 100);
-            this.btn5.TabIndex = 7;
-            this.btn5.TabStop = false;
-            this.btn5.Tag = "Img_Secundaria";
-            this.btn5.UseVisualStyleBackColor = false;
-            this.btn5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn5.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn5.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn4
-            // 
-            this.btn4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn4.BackColor = System.Drawing.Color.White;
-            this.btn4.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn4.Enabled = false;
-            this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4.Location = new System.Drawing.Point(568, 0);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(100, 100);
-            this.btn4.TabIndex = 2;
-            this.btn4.TabStop = false;
-            this.btn4.Tag = "Img_Secundaria";
-            this.btn4.UseVisualStyleBackColor = false;
-            this.btn4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn4.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn4.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
-            // btn3
-            // 
-            this.btn3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btn3.BackColor = System.Drawing.Color.White;
-            this.btn3.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.mais32px_;
-            this.btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3.Location = new System.Drawing.Point(275, 1);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(250, 250);
-            this.btn3.TabIndex = 1;
-            this.btn3.TabStop = false;
-            this.btn3.UseVisualStyleBackColor = false;
-            this.btn3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_Click);
-            this.btn3.MouseEnter += new System.EventHandler(this.button_Hover);
-            this.btn3.MouseLeave += new System.EventHandler(this.button_Leave);
-            // 
             // panel_AreaInferior
             // 
             this.panel_AreaInferior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -437,9 +148,9 @@
             this.panel_AreaInferior.Controls.Add(this.groupBox1);
             this.panel_AreaInferior.Controls.Add(this.splitContainer1);
             this.panel_AreaInferior.Controls.Add(this.panel2);
-            this.panel_AreaInferior.Location = new System.Drawing.Point(-1, 314);
+            this.panel_AreaInferior.Location = new System.Drawing.Point(-1, -2);
             this.panel_AreaInferior.Name = "panel_AreaInferior";
-            this.panel_AreaInferior.Size = new System.Drawing.Size(909, 444);
+            this.panel_AreaInferior.Size = new System.Drawing.Size(909, 440);
             this.panel_AreaInferior.TabIndex = 1;
             // 
             // panel3
@@ -457,7 +168,7 @@
             this.groupBox1.Controls.Add(this.radioButton_Terreo);
             this.groupBox1.Font = new System.Drawing.Font("Gill Sans MT", 9F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(473, 85);
+            this.groupBox1.Location = new System.Drawing.Point(473, 83);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
@@ -1281,15 +992,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(904, 757);
+            this.ClientSize = new System.Drawing.Size(904, 437);
             this.Controls.Add(this.panel_AreaInferior);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Add";
             this.Text = "Adicionar";
-            this.panel1.ResumeLayout(false);
             this.panel_AreaInferior.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1354,16 +1063,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Panel panel_AreaInferior;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -1432,12 +1132,5 @@
         private System.Windows.Forms.RichTextBox richTextBox_Observacoes;
         private System.Windows.Forms.Button button_Finalizar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button lixo2;
-        private System.Windows.Forms.Button lixo1;
-        private System.Windows.Forms.Button lixo5;
-        private System.Windows.Forms.Button lixo4;
-        private System.Windows.Forms.Button lixo6;
-        private System.Windows.Forms.Button lixo0;
-        private System.Windows.Forms.Button lixo3;
     }
 }

@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add.cs">
+    <Compile Include="Telas\Add\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add.Designer.cs">
+    <Compile Include="Telas\Add\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\FileImovel.cs" />
-    <Compile Include="Detalhes.cs">
+    <Compile Include="Telas\Detalhes\Detalhes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Detalhes.Designer.cs">
+    <Compile Include="Telas\Detalhes\Detalhes.Designer.cs">
       <DependentUpon>Detalhes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Telas\Home\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Telas\Home\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Enums\Bairro.cs" />
@@ -72,13 +72,13 @@
     <Compile Include="Model\Enums\Status.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add.resx">
+    <EmbeddedResource Include="Telas\Add\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Detalhes.resx">
+    <EmbeddedResource Include="Telas\Detalhes\Detalhes.resx">
       <DependentUpon>Detalhes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Telas\Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

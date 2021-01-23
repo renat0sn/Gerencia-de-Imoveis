@@ -39,7 +39,6 @@ namespace GerenciaDeImoveis
             int indexImovel = Imoveis.IndexOf(imovel);
 
             Panel bloco = new Panel();
-            Panel pImagem = new Panel();
             Panel pInferior = new Panel();
 
             FlowLayoutPanel f1 = new FlowLayoutPanel();
@@ -57,7 +56,6 @@ namespace GerenciaDeImoveis
             Label status = new Label();
             Label indicacao = new Label();
 
-            PictureBox casa = new PictureBox();
             PictureBox ic1 = new PictureBox();
             PictureBox ic2 = new PictureBox();
             PictureBox ic3 = new PictureBox();
@@ -74,23 +72,14 @@ namespace GerenciaDeImoveis
             bloco.Controls.Add(endereco);
             bloco.Controls.Add(bairro);
             bloco.Controls.Add(preco);
-            bloco.Controls.Add(pImagem);
             bloco.Controls.Add(pInferior);
             bloco.MouseClick += Bloco_Click;
 
-            pImagem.Controls.Add(casa);
-            pImagem.Dock = DockStyle.Left;
-            pImagem.Location = new Point(0, 0);
-            pImagem.Margin = new Padding(0);
-            pImagem.Name = "pImagem";
-            pImagem.Padding = new Padding(5);
-            pImagem.Size = new Size(126, 138);
-            pImagem.MouseClick += Bloco_Click;
-
             pInferior.BorderStyle = BorderStyle.Fixed3D;
-            pInferior.Location = new Point(119, 70);
+            pInferior.Location = new Point(-2, 70);
             pInferior.Name = "pInferior";
-            pInferior.Size = new Size(547, 69);
+            pInferior.Size = new Size(bloco.Size.Width + 2, 69);
+            pInferior.Margin = new Padding(0);
             pInferior.Controls.Add(f1);
             pInferior.Controls.Add(f2);
             pInferior.Controls.Add(f3);
@@ -104,43 +93,42 @@ namespace GerenciaDeImoveis
 
             f1.Controls.Add(ic1);
             f1.Controls.Add(estilo);
-            f1.Location = new Point(229, 0);
             f1.Margin = new Padding(0);
             f1.Name = "f1";
             f1.Size = new Size(100, 35);
+            f1.Location = new Point((bloco.Size.Width/2) - (f1.Size.Width/2), 0);
             f1.MouseClick += Bloco_Click;
 
             f2.Controls.Add(ic2);
             f2.Controls.Add(status);
-            f2.Location = new Point(229, 32);
             f2.Margin = new Padding(0);
             f2.Name = "f2";
             f2.Size = new Size(200, 35);
+            f2.Location = new Point((bloco.Size.Width / 2) - (f1.Size.Width / 2), 32);
             f2.MouseClick += Bloco_Click;
 
             f3.Controls.Add(ic3);
             f3.Controls.Add(indicacao);
-            f3.Location = new Point(361, 0);
+            f3.Location = new Point(491, 0);
             f3.Margin = new Padding(0);
             f3.Name = "f3";
             f3.Size = new Size(180, 35);
             f3.MouseClick += Bloco_Click;
 
             endereco.AutoSize = true;
-            endereco.Location = new Point(142, 5);
+            endereco.Location = new Point(20, 5);
             endereco.Margin = new Padding(0);
             endereco.Name = "endereco";
             endereco.Size = new Size(299, 33);
             endereco.Text = imovel.Endereco;
             endereco.Tag = "endereco";
             endereco.TextAlign = ContentAlignment.MiddleLeft;
-            float font = formatarLabel(endereco);
-            endereco.Font = new Font("Gill Sans MT", font);
+            endereco.Font = formatarLabel(endereco, 470);
             endereco.MouseClick += Bloco_Click;
 
             bairro.AutoSize = true;
             bairro.Font = new Font("Gill Sans MT", 11F);
-            bairro.Location = new Point(144, 38);
+            bairro.Location = new Point(22, 38);
             bairro.Name = "bairro";
             bairro.Size = new Size(123, 21);
             bairro.Text = "(" + imovel.Bairro.ToString().Replace("_", " ") + ")";
@@ -222,23 +210,6 @@ namespace GerenciaDeImoveis
             indicacao.TextAlign = ContentAlignment.MiddleLeft;
             indicacao.MouseClick += Bloco_Click;
 
-            casa.Dock = DockStyle.Fill;
-            if(imovel.Fotos[3] == "")
-            {
-                casa.BackgroundImageLayout = ImageLayout.Center;
-            }
-            else
-            {
-                casa.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-            casa.BackgroundImage = imovel.Fotos[3] == "" ? Properties.Resources.remove : Add.ExifRotate(Image.FromFile(imovel.GetPathFoto(3)));
-            casa.Location = new Point(5, 5);
-            casa.Margin = new Padding(0);
-            casa.Name = "casa";
-            casa.Size = new Size(116, 128);
-            casa.SizeMode = PictureBoxSizeMode.StretchImage;
-            casa.MouseClick += Bloco_Click;
-
             ic1.Image = Properties.Resources.check;
             ic1.Location = new Point(0, 0);
             ic1.Margin = new Padding(0, 0, 4, 0);
@@ -256,7 +227,7 @@ namespace GerenciaDeImoveis
             ic2.MouseClick += Bloco_Click;
 
             ic3.Image = Properties.Resources.check;
-            ic3.Location = new Point(0, 0);
+            ic3.Location = new Point(120, 0);
             ic3.Margin = new Padding(0, 0, 4, 0);
             ic3.Name = "ic3";
             ic3.Size = new Size(23, 35);
@@ -271,7 +242,7 @@ namespace GerenciaDeImoveis
             editar.FlatAppearance.MouseOverBackColor = Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(230)))), ((int)(((byte)(247)))));
             editar.FlatAppearance.MouseDownBackColor = Color.White;
             editar.FlatStyle = FlatStyle.Flat;
-            editar.Location = new Point(462, 33);
+            editar.Location = new Point(580, 33);
             editar.Name = "editar";
             editar.Size = new Size(32, 32);
             editar.Click += Editar_Click;
@@ -284,7 +255,7 @@ namespace GerenciaDeImoveis
             excluir.FlatAppearance.BorderSize = 0;
             excluir.FlatAppearance.MouseOverBackColor = Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             excluir.FlatStyle = FlatStyle.Flat;
-            excluir.Location = new Point(503, 33);
+            excluir.Location = new Point(615, 33);
             excluir.Name = "excluir";
             excluir.Size = new Size(32, 32);
             excluir.BringToFront();
@@ -297,14 +268,16 @@ namespace GerenciaDeImoveis
         {
             Panel p = (sender as Button).Parent.Parent as Panel;
             Imovel ant = GetImovelByPanel(p);
-            Add edit = new Add(ant);
-
-            if (edit.ShowDialog(this) == DialogResult.OK)
+            using (Add edit = new Add(ant))
             {
-                int index = Imoveis.IndexOf(GetImovelByPanel(p));
-                Imoveis[index] = edit.Imovel;
-                UpdateBloco(p, edit.Imovel);
-                File.AtualizarImovel(ant, edit.Imovel);
+                if (edit.ShowDialog(this) == DialogResult.OK)
+                {
+                    int index = Imoveis.IndexOf(GetImovelByPanel(p));
+                    Imoveis[index] = edit.Imovel;
+                    UpdateBloco(p, edit.Imovel);
+                    File.AtualizarImovel(ant, edit.Imovel);
+                    
+                }
             }
         }
 
@@ -321,10 +294,6 @@ namespace GerenciaDeImoveis
 
         public void RemoverBloco(Panel bloco, Imovel imovel)
         {
-            for (int k = 0; k < 7; k++)
-            {
-                File.ExcluirImg(imovel.GetPathFoto(k));
-            }
             flowLayoutPanel_ListaCasas.Controls.Remove(bloco);
             Imoveis.Remove(imovel);
             File.ExcluirImovel(imovel);
@@ -332,7 +301,6 @@ namespace GerenciaDeImoveis
 
         public void UpdateBloco (Panel bloco, Imovel imovel)
         {
-            PictureBox casa = bloco.Controls.Find("casa", true)[0] as PictureBox;
             Label endereco = bloco.Controls.Find("endereco", true)[0] as Label;
             Label bairro = bloco.Controls.Find("bairro", true)[0] as Label;
             Label preco = bloco.Controls.Find("preco", true)[0] as Label;
@@ -342,17 +310,8 @@ namespace GerenciaDeImoveis
             Label status = bloco.Controls.Find("status", true)[0] as Label;
             Label indicacao = bloco.Controls.Find("indicacao", true)[0] as Label;
 
-            if (imovel.Fotos[3] == "")
-            {
-                casa.BackgroundImageLayout = ImageLayout.Center;
-            }
-            else
-            {
-                casa.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-            casa.BackgroundImage = imovel.Fotos[3] == "" ? Properties.Resources.remove : Add.ExifRotate(Image.FromFile(imovel.GetPathFoto(3)));
             endereco.Text = imovel.Endereco;
-            endereco.Font = new Font("Gill Sans MT", formatarLabel(endereco));
+            endereco.Font = formatarLabel(endereco, 470);
             bairro.Text = "(" + imovel.Bairro.ToString().Replace("_", " ") + ")";
             preco.Text = "R$" + imovel.Preco.ToString("N2");
             terrenoValue.Text = imovel.Terreno.ToString() + " m²";
@@ -364,8 +323,20 @@ namespace GerenciaDeImoveis
 
         private void Bloco_Click(object sender, MouseEventArgs e)
         {
-            Detalhes det = new Detalhes();
-            det.Show();
+            using (Detalhes det = new Detalhes(GetImovelByObject(sender)))
+            {
+                det.ShowDialog();
+            }
+        }
+
+        private Imovel GetImovelByObject(object obj)
+        {
+            Control control = obj as Control;
+            while(control.Name != "bloco")
+            {
+                control = control.Parent;
+            }
+            return GetImovelByPanel(control as Panel);
         }
 
         private Imovel GetImovelByPanel(Panel p)
@@ -381,32 +352,32 @@ namespace GerenciaDeImoveis
             return null;
         }
 
-        private float formatarLabel(Label l)
+        private Font formatarLabel(Label l, int tamContainer)
         {
-            int tam = l.Text.Length;
-            if (tam < 28)
+            float f = 17;
+            Font font = new Font("Gill Sans MT", f);
+            Size s = TextRenderer.MeasureText(l.Text, font);
+
+            while (s.Width > tamContainer)
             {
-                return 17;
+                f -= 0.5F;
+                font = new Font(l.Font.Name, f);
+                s = TextRenderer.MeasureText(l.Text, font);
             }
-            else if(tam < 32)
-            {
-                return 15;
-            }
-            else
-            {
-                return 13;
-            }
+
+            return font;
         }
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            Add add = new Add();
-
-            if(add.ShowDialog(this) == DialogResult.OK)
+            using (Add add = new Add())
             {
-                Imoveis.Add(add.Imovel);
-                NovoBloco(add.Imovel);
-                File.AddImovel(add.Imovel);
+                if (add.ShowDialog(this) == DialogResult.OK)
+                {
+                    Imoveis.Add(add.Imovel);
+                    NovoBloco(add.Imovel);
+                    File.AddImovel(add.Imovel);
+                }
             }
         }
 

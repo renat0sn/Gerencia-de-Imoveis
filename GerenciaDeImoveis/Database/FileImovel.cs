@@ -28,31 +28,25 @@ namespace GerenciaDeImoveis.Database
         {
             Imovel i;
             string[] param = s.Split(';');
-            string[] Fotos = new string[7] { param[0], param[1], param[2], param[3], param[4], param[5], param[6] };
-            string endereco = param[7];
-            Bairro bairro = (Bairro)(int.Parse(param[8]));
-            double preco = double.Parse(param[9]);
-            int terreno = int.Parse(param[10]);
-            int area = int.Parse(param[11]);
-            int garagens = int.Parse(param[12]);
-            int dorm = int.Parse(param[13]);
-            string observ = param[14].Replace(@"\n", "\n");
-            Estilo estilo = (Estilo)(int.Parse(param[15]));
-            Status status = (Status)(int.Parse(param[16]));
-            Indicacao indicacao = (Indicacao)(int.Parse(param[17]));
+            string endereco = param[0];
+            Bairro bairro = (Bairro)(int.Parse(param[1]));
+            double preco = double.Parse(param[2]);
+            int terreno = int.Parse(param[3]);
+            int area = int.Parse(param[4]);
+            int garagens = int.Parse(param[5]);
+            int dorm = int.Parse(param[6]);
+            string observ = param[7].Replace(@"\n", "\n");
+            Estilo estilo = (Estilo)(int.Parse(param[8]));
+            Status status = (Status)(int.Parse(param[9]));
+            Indicacao indicacao = (Indicacao)(int.Parse(param[10]));
 
-            i = new Imovel(Fotos, endereco, bairro, preco, terreno, area, garagens, dorm, observ, estilo, status, indicacao);
+            i = new Imovel(endereco, bairro, preco, terreno, area, garagens, dorm, observ, estilo, status, indicacao);
             return i;
         }
 
         private string ConvertImovelToString(Imovel i)
         {
             StringBuilder sb = new StringBuilder();
-
-            for (int k = 0; k < 7; k++)
-            {
-                sb.Append(i.Fotos[k] + ";");
-            }
 
             sb.Append(i.Endereco + ";");
             sb.Append((int)i.Bairro + ";");
@@ -119,15 +113,6 @@ namespace GerenciaDeImoveis.Database
 
             string text = File.ReadAllText(Caminho).Replace(ant, d);
             File.WriteAllText(Caminho, text);
-        }
-
-        public void ExcluirImg(string path)
-        {
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-            }
-            Debug.WriteLine(path);
         }
     }
 }
