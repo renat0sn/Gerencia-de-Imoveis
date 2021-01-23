@@ -69,6 +69,7 @@ namespace GerenciaDeImoveis
             bloco.Name = "bloco";
             bloco.Padding = new Padding(0);
             bloco.Size = new Size(667, 140);
+            bloco.Anchor = AnchorStyles.Top;
             bloco.Controls.Add(endereco);
             bloco.Controls.Add(bairro);
             bloco.Controls.Add(preco);
@@ -155,7 +156,7 @@ namespace GerenciaDeImoveis
             terrenoLabel.MouseClick += Bloco_Click;
 
             terrenoValue.Font = new Font("Gill Sans MT", 12F);
-            terrenoValue.Location = new Point(93, 0);
+            terrenoValue.Location = new Point(98, 0);
             terrenoValue.Name = "terrenoValue";
             terrenoValue.Size = new Size(81, 35);
             terrenoValue.Text = imovel.Terreno.ToString() + " m²";
@@ -173,7 +174,7 @@ namespace GerenciaDeImoveis
             areaLabel.MouseClick += Bloco_Click;
 
             areaValue.Font = new Font("Gill Sans MT", 12F);
-            areaValue.Location = new Point(149, 32);
+            areaValue.Location = new Point(154, 32);
             areaValue.Name = "areaValue";
             areaValue.Size = new Size(67, 35);
             areaValue.Text = imovel.AreaConstruida.ToString() + " m²";
@@ -388,6 +389,50 @@ namespace GerenciaDeImoveis
                 Debug.WriteLine("Index: " + Imoveis.IndexOf(i).ToString() + " | " + i.Endereco);
             }
             Debug.WriteLine("\n");
+        }
+
+        private void button_Busca_Click(object sender, EventArgs e)
+        {
+            string busca = textBox_Busca.Text;
+            if(busca != "")
+            {
+                newButton_Limpar();
+                flowLayoutPanel_ListaCasas.Controls.Clear();
+                foreach(Imovel i in Imoveis)
+                {
+                    if (i.BuscaValida(busca))
+                    {
+                        NovoBloco(i);
+                    }
+                }
+            }
+        }
+
+        private void newButton_Limpar()
+        {
+            if(splitContainerPrincipal.Panel2.Controls["button_Limpar"] == null)
+            {
+                Button limpar = new Button();
+
+                limpar.Name = "button_Limpar";
+                limpar.Location = new Point((splitContainerPrincipal.Panel2.Width / 2) - 80, 90);
+                limpar.Size = new Size(160, 30);
+                limpar.Anchor = AnchorStyles.Top;
+                limpar.Text = "Limpar filtro";
+                limpar.BackColor = Color.PaleTurquoise;
+                limpar.Font = new Font("Gill Sans MT", 11);
+                limpar.MouseClick += Limpar_MouseClick;
+
+                splitContainerPrincipal.Panel2.Controls.Add(limpar);
+            }
+        }
+
+        private void Limpar_MouseClick(object sender, MouseEventArgs e)
+        {
+            splitContainerPrincipal.Panel2.Controls.Remove(sender as Control);
+            textBox_Busca.Clear();
+            flowLayoutPanel_ListaCasas.Controls.Clear();
+            LoadInitial();
         }
     }
 }

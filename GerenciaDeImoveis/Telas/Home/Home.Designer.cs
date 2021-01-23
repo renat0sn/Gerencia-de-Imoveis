@@ -36,7 +36,6 @@
             this.textBox_Busca = new System.Windows.Forms.TextBox();
             this.button_Busca = new System.Windows.Forms.Button();
             this.flowLayoutPanel_ListaCasas = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerPrincipal)).BeginInit();
             this.splitContainerPrincipal.Panel1.SuspendLayout();
             this.splitContainerPrincipal.Panel2.SuspendLayout();
@@ -49,7 +48,6 @@
             // splitContainerPrincipal
             // 
             this.splitContainerPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerPrincipal.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainerPrincipal.IsSplitterFixed = true;
             this.splitContainerPrincipal.Location = new System.Drawing.Point(0, 0);
             this.splitContainerPrincipal.Name = "splitContainerPrincipal";
@@ -74,6 +72,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::GerenciaDeImoveis.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(29, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -94,7 +93,7 @@
             this.button_Add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Add.Location = new System.Drawing.Point(550, 602);
+            this.button_Add.Location = new System.Drawing.Point(574, 602);
             this.button_Add.Name = "button_Add";
             this.button_Add.Size = new System.Drawing.Size(91, 68);
             this.button_Add.TabIndex = 0;
@@ -105,7 +104,6 @@
             // 
             this.panel1_Busca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1_Busca.Controls.Add(this.button1);
             this.panel1_Busca.Controls.Add(this.flowLayoutPanel_Busca);
             this.panel1_Busca.Location = new System.Drawing.Point(3, 3);
             this.panel1_Busca.Name = "panel1_Busca";
@@ -117,9 +115,9 @@
             this.flowLayoutPanel_Busca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.flowLayoutPanel_Busca.Controls.Add(this.textBox_Busca);
             this.flowLayoutPanel_Busca.Controls.Add(this.button_Busca);
-            this.flowLayoutPanel_Busca.Location = new System.Drawing.Point(180, 24);
+            this.flowLayoutPanel_Busca.Location = new System.Drawing.Point(174, 24);
             this.flowLayoutPanel_Busca.Name = "flowLayoutPanel_Busca";
-            this.flowLayoutPanel_Busca.Size = new System.Drawing.Size(353, 34);
+            this.flowLayoutPanel_Busca.Size = new System.Drawing.Size(387, 34);
             this.flowLayoutPanel_Busca.TabIndex = 3;
             // 
             // textBox_Busca
@@ -128,7 +126,7 @@
             this.textBox_Busca.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.textBox_Busca.Location = new System.Drawing.Point(3, 3);
             this.textBox_Busca.Name = "textBox_Busca";
-            this.textBox_Busca.Size = new System.Drawing.Size(299, 29);
+            this.textBox_Busca.Size = new System.Drawing.Size(333, 29);
             this.textBox_Busca.TabIndex = 0;
             // 
             // button_Busca
@@ -140,17 +138,16 @@
             this.button_Busca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button_Busca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Busca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Busca.Location = new System.Drawing.Point(308, 3);
+            this.button_Busca.Location = new System.Drawing.Point(342, 3);
             this.button_Busca.Name = "button_Busca";
             this.button_Busca.Size = new System.Drawing.Size(41, 29);
             this.button_Busca.TabIndex = 2;
             this.button_Busca.UseVisualStyleBackColor = true;
+            this.button_Busca.Click += new System.EventHandler(this.button_Busca_Click);
             // 
             // flowLayoutPanel_ListaCasas
             // 
-            this.flowLayoutPanel_ListaCasas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel_ListaCasas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowLayoutPanel_ListaCasas.AutoScroll = true;
             this.flowLayoutPanel_ListaCasas.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.flowLayoutPanel_ListaCasas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -160,16 +157,6 @@
             this.flowLayoutPanel_ListaCasas.Size = new System.Drawing.Size(695, 569);
             this.flowLayoutPanel_ListaCasas.TabIndex = 1;
             this.flowLayoutPanel_ListaCasas.WrapContents = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(591, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Listar imoveis";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Home
             // 
@@ -201,7 +188,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Busca;
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
 
