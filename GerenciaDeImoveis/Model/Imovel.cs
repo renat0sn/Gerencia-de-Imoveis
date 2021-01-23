@@ -41,8 +41,24 @@
                 + "\nEstilo: " + Estilo.ToString()
                 + "\nStatus: " + Status.ToString().Replace('_', ' ')
                 + "\nIndicação: " + Indicacao.ToString()
-                + "\nObservações: \n" + Observacoes;
+                + "\nObservações: \n" + Observacoes.Replace(@"\n", "\n");
             return msg;
+        }
+
+        public bool BuscaValida(string s)
+        {
+            string sLower = s.ToLower();
+            return Endereco.ToLower().Contains(sLower)
+                || Bairro.ToString().Replace("_", " ").ToLower().Contains(sLower)
+                || Preco.ToString("N2").Contains(sLower)
+                || Terreno.ToString().Contains(sLower)
+                || AreaConstruida.ToString().Contains(sLower)
+                || nGaragens.ToString().Contains(sLower)
+                || nDormitorios.ToString().Contains(sLower)
+                || Observacoes.ToLower().Contains(sLower)
+                || Estilo.ToString().ToLower().Contains(sLower)
+                || Status.ToString().ToLower().Replace("_", " ").Contains(sLower)
+                || Indicacao.ToString().ToLower().Contains(sLower);
         }
     }
 }
