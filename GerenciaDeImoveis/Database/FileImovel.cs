@@ -55,7 +55,7 @@ namespace GerenciaDeImoveis.Database
             sb.Append(i.AreaConstruida + ";");
             sb.Append(i.nGaragens + ";");
             sb.Append(i.nDormitorios + ";");
-            sb.Append(i.Observacoes.Replace(";", ".") + ";");
+            sb.Append(i.Observacoes.Replace(";", ".").Replace("\n", @"\n") + ";");
             sb.Append((int)i.Estilo + ";");
             sb.Append((int)i.Status + ";");
             sb.Append((int)i.Indicacao + ";");
