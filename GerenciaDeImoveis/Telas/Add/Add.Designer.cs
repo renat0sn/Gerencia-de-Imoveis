@@ -496,7 +496,7 @@
             0,
             0});
             this.numericUpDown_Terreno.Minimum = new decimal(new int[] {
-            200,
+            100,
             0,
             0,
             0});

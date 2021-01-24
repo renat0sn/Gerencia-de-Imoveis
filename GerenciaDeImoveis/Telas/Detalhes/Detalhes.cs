@@ -49,7 +49,7 @@ namespace GerenciaDeImoveis
             enderecoBairro.Text = Imovel.Endereco + " (" + Imovel.Bairro.ToString().Replace("_", " ") + ")";
             enderecoBairro.Font = PreencherStringNoLabel(enderecoBairro);
             
-            preco.Font = new Font("Gill Sans MT", 17F);
+            preco.Font = new Font("Gill Sans MT", 17F, FontStyle.Bold);
             preco.Location = new Point(0, 44);
             preco.Name = "preco";
             preco.Size = new Size(502, 62);
