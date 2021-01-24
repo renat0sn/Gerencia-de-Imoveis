@@ -24,11 +24,17 @@ namespace GerenciaDeImoveis
             File = new FileImovel();
             Imoveis = new List<Imovel>(File.LoadImoveis());
             LoadInitial();
+
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = comboBox2.Items.Count - 1;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = comboBox4.Items.Count - 1;
         }
+
 
         public void LoadInitial()
         {
-            foreach(Imovel i in Imoveis)
+            foreach (Imovel i in Imoveis)
             {
                 NovoBloco(i);
             }
@@ -65,11 +71,11 @@ namespace GerenciaDeImoveis
 
             bloco.BorderStyle = BorderStyle.FixedSingle;
             bloco.Cursor = Cursors.Hand;
-            bloco.Margin = new Padding(0,0,0,10);
+            bloco.Margin = new Padding(0, 0, 0, 10);
             bloco.Name = "bloco";
             bloco.Padding = new Padding(0);
             bloco.Size = new Size(667, 140);
-            bloco.Anchor = AnchorStyles.Top;
+            bloco.Anchor = AnchorStyles.Left;
             bloco.Controls.Add(endereco);
             bloco.Controls.Add(bairro);
             bloco.Controls.Add(preco);
@@ -97,7 +103,7 @@ namespace GerenciaDeImoveis
             f1.Margin = new Padding(0);
             f1.Name = "f1";
             f1.Size = new Size(100, 35);
-            f1.Location = new Point((bloco.Size.Width/2) - (f1.Size.Width/2), 0);
+            f1.Location = new Point((bloco.Size.Width / 2) - (f1.Size.Width / 2), 0);
             f1.MouseClick += Bloco_Click;
 
             f2.Controls.Add(ic2);
@@ -277,7 +283,7 @@ namespace GerenciaDeImoveis
                     Imoveis[index] = edit.Imovel;
                     UpdateBloco(p, edit.Imovel);
                     File.AtualizarImovel(ant, edit.Imovel);
-                    
+
                 }
             }
         }
@@ -300,7 +306,7 @@ namespace GerenciaDeImoveis
             File.ExcluirImovel(imovel);
         }
 
-        public void UpdateBloco (Panel bloco, Imovel imovel)
+        public void UpdateBloco(Panel bloco, Imovel imovel)
         {
             Label endereco = bloco.Controls.Find("endereco", true)[0] as Label;
             Label bairro = bloco.Controls.Find("bairro", true)[0] as Label;
@@ -333,7 +339,7 @@ namespace GerenciaDeImoveis
         private Imovel GetImovelByObject(object obj)
         {
             Control control = obj as Control;
-            while(control.Name != "bloco")
+            while (control.Name != "bloco")
             {
                 control = control.Parent;
             }
@@ -342,9 +348,9 @@ namespace GerenciaDeImoveis
 
         private Imovel GetImovelByPanel(Panel p)
         {
-            foreach(Control c in p.Controls)
+            foreach (Control c in p.Controls)
             {
-                if(c.Tag.ToString() == "endereco")
+                if (c.Tag.ToString() == "endereco")
                 {
                     Label l = c as Label;
                     return Imoveis.Where(im => im.Endereco == l.Text).FirstOrDefault();
@@ -384,7 +390,7 @@ namespace GerenciaDeImoveis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach(Imovel i in Imoveis)
+            foreach (Imovel i in Imoveis)
             {
                 Debug.WriteLine("Index: " + Imoveis.IndexOf(i).ToString() + " | " + i.Endereco);
             }
@@ -394,11 +400,11 @@ namespace GerenciaDeImoveis
         private void button_Busca_Click(object sender, EventArgs e)
         {
             string busca = textBox_Busca.Text;
-            if(busca != "")
+            if (busca != "")
             {
                 newButton_Limpar();
                 flowLayoutPanel_ListaCasas.Controls.Clear();
-                foreach(Imovel i in Imoveis)
+                foreach (Imovel i in Imoveis)
                 {
                     if (i.BuscaValida(busca))
                     {
@@ -410,7 +416,7 @@ namespace GerenciaDeImoveis
 
         private void newButton_Limpar()
         {
-            if(splitContainerPrincipal.Panel2.Controls["button_Limpar"] == null)
+            if (splitContainerPrincipal.Panel2.Controls["button_Limpar"] == null)
             {
                 Button limpar = new Button();
 
@@ -433,6 +439,96 @@ namespace GerenciaDeImoveis
             textBox_Busca.Clear();
             flowLayoutPanel_ListaCasas.Controls.Clear();
             LoadInitial();
+        }
+
+        private void trackBarMinimo_Scroll(object sender, EventArgs e)
+        {
+            TrackBar trackBarMin = sender as TrackBar;
+            GroupBox groupBox = trackBarMin.Parent as GroupBox;
+            TrackBar trackBarMax = groupBox.Controls["trackBar_ValorMaximoPreco"] as TrackBar;
+            Label trackLabelMin = groupBox.Controls["label_ValorMinimoPreco"] as Label;
+
+            if (groupBox.Name == "groupBox_Preco")
+            {
+                trackLabelMin.Text = "R$ " + (100000 * trackBarMin.Value).ToString("N2");
+            }
+
+            if(trackBarMin.Value > trackBarMax.Value)
+            {
+                trackBarMax.Value = trackBarMin.Value;
+            }
+
+            if (trackBarMin.Value == trackBarMin.Maximum)
+            {
+                trackLabelMin.Text = "Máximo";
+            }
+            else if (trackBarMin.Value == trackBarMin.Minimum)
+            {
+                trackLabelMin.Text = "Mínimo";
+            }
+        }
+
+        private void trackBarMaximo_Scroll(object sender, EventArgs e)
+        {
+            TrackBar trackBarMax = sender as TrackBar;
+            GroupBox groupBox = trackBarMax.Parent as GroupBox;
+            TrackBar trackBarMin = groupBox.Controls["trackBar_ValorMinimoPreco"] as TrackBar;
+            Label trackLabelMax = groupBox.Controls["label_ValorMaximoPreco"] as Label;
+
+            trackLabelMax.Text = "R$ " + (100000 * trackBarMax.Value).ToString("N2");
+
+            if (trackBarMax.Value < trackBarMin.Value)
+            {
+                trackBarMin.Value = trackBarMax.Value;
+            }
+
+            if(trackBarMax.Value == trackBarMax.Maximum)
+            {
+                trackLabelMax.Text = "Máximo";
+            }
+            else if(trackBarMax.Value == trackBarMax.Minimum)
+            {
+                trackLabelMax.Text = "Mínimo";
+            }
+        }
+
+        private void DesabilitarTrackBar(TrackBar track, Label label)
+        {
+            track.Enabled = false;
+            track.Value = track.Name.Contains("Minimo") ? track.Minimum : track.Maximum;
+
+            label.Text = label.Name.Contains("Minimo") ? "R$ 0,00" : "R$ 20.000.000,00";
+        }
+
+        private void HabilitarTrackBar(TrackBar track, Label label)
+        {
+            track.Enabled = true;
+
+            label.Text = "R$ " + (label.Name.Contains("Minimo") ? 1000000.ToString("N2") : 5000000.ToString("N2"));
+        }
+
+        private void checkBox_Menos_CheckedChanged(object sender, EventArgs e)
+        {
+            if((sender as CheckBox).Checked == true)
+            {
+                DesabilitarTrackBar(trackBar_ValorMinimoPreco, label_ValorMinimoPreco);
+            }
+            else
+            {
+                HabilitarTrackBar(trackBar_ValorMinimoPreco, label_ValorMinimoPreco);
+            }
+        }
+
+        private void checkBox_Mais_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((sender as CheckBox).Checked == true)
+            {
+                DesabilitarTrackBar(trackBar_ValorMaximoPreco, label_ValorMaximoPreco);
+            }
+            else
+            {
+                HabilitarTrackBar(trackBar_ValorMaximoPreco, label_ValorMaximoPreco);
+            }
         }
     }
 }
