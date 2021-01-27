@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainerPrincipal = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox_AreaConstruida = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,43 +58,54 @@
             this.trackBar_ValorMinimoPreco = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.panel_Bairros = new System.Windows.Forms.Panel();
+            this.Alto_Da_Boa_Vista = new System.Windows.Forms.CheckBox();
+            this.Jardim_Santo_Amaro = new System.Windows.Forms.CheckBox();
+            this.Jardim_Prudência = new System.Windows.Forms.CheckBox();
+            this.Brooklin_Velho = new System.Windows.Forms.CheckBox();
+            this.Jardim_Petrópolis = new System.Windows.Forms.CheckBox();
+            this.Chácara_Monte_Alegre = new System.Windows.Forms.CheckBox();
+            this.Jardim_Marajoara = new System.Windows.Forms.CheckBox();
+            this.Granja_Julieta = new System.Windows.Forms.CheckBox();
+            this.Jardim_Dos_Estados = new System.Windows.Forms.CheckBox();
+            this.Jardim_Cordeiro = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel_ListaCasas = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_Pagina = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1_Busca = new System.Windows.Forms.Panel();
             this.button_Add = new System.Windows.Forms.Button();
             this.flowLayoutPanel_Busca = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox_Busca = new System.Windows.Forms.TextBox();
             this.button_Busca = new System.Windows.Forms.Button();
-            this.flowLayoutPanel_ListaCasas = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerPrincipal)).BeginInit();
             this.splitContainerPrincipal.Panel1.SuspendLayout();
             this.splitContainerPrincipal.Panel2.SuspendLayout();
             this.splitContainerPrincipal.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox_AreaConstruida.SuspendLayout();
             this.groupBox_Terreno.SuspendLayout();
             this.groupBox_Preco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_ValorMaximoPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_ValorMinimoPreco)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_Bairros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel1_Busca.SuspendLayout();
             this.flowLayoutPanel_Busca.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerPrincipal
@@ -102,6 +119,7 @@
             // splitContainerPrincipal.Panel1
             // 
             this.splitContainerPrincipal.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.splitContainerPrincipal.Panel1.Controls.Add(this.button2);
             this.splitContainerPrincipal.Panel1.Controls.Add(this.button1);
             this.splitContainerPrincipal.Panel1.Controls.Add(this.groupBox2);
             this.splitContainerPrincipal.Panel1.Controls.Add(this.groupBox_AreaConstruida);
@@ -114,14 +132,90 @@
             // splitContainerPrincipal.Panel2
             // 
             this.splitContainerPrincipal.Panel2.AutoScroll = true;
-            this.splitContainerPrincipal.Panel2.AutoScrollMinSize = new System.Drawing.Size(352, 400);
             this.splitContainerPrincipal.Panel2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.splitContainerPrincipal.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainerPrincipal.Panel2.Controls.Add(this.panel1_Busca);
-            this.splitContainerPrincipal.Panel2.Controls.Add(this.flowLayoutPanel_ListaCasas);
-            this.splitContainerPrincipal.Size = new System.Drawing.Size(1203, 769);
+            this.splitContainerPrincipal.Size = new System.Drawing.Size(1185, 769);
             this.splitContainerPrincipal.SplitterDistance = 456;
             this.splitContainerPrincipal.SplitterWidth = 3;
             this.splitContainerPrincipal.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Gill Sans MT", 12F);
+            this.button2.Location = new System.Drawing.Point(8, 698);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 59);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Limpar filtros";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 16F);
+            this.button1.Location = new System.Drawing.Point(102, 698);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(347, 59);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Aplicar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button_AplicarFiltros);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Font = new System.Drawing.Font("Gill Sans MT", 14F);
+            this.groupBox2.ForeColor = System.Drawing.Color.Khaki;
+            this.groupBox2.Location = new System.Drawing.Point(53, 606);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(347, 70);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Estilo";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioButton3.Location = new System.Drawing.Point(128, 28);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 31);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Ambos";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioButton2.Location = new System.Drawing.Point(231, 28);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(95, 31);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "Sobrado";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioButton1.Location = new System.Drawing.Point(24, 28);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 31);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.Text = "Térreo";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // groupBox_AreaConstruida
             // 
@@ -134,9 +228,9 @@
             this.groupBox_AreaConstruida.Controls.Add(this.label5);
             this.groupBox_AreaConstruida.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.groupBox_AreaConstruida.ForeColor = System.Drawing.Color.Khaki;
-            this.groupBox_AreaConstruida.Location = new System.Drawing.Point(267, 462);
+            this.groupBox_AreaConstruida.Location = new System.Drawing.Point(263, 458);
             this.groupBox_AreaConstruida.Name = "groupBox_AreaConstruida";
-            this.groupBox_AreaConstruida.Size = new System.Drawing.Size(177, 142);
+            this.groupBox_AreaConstruida.Size = new System.Drawing.Size(186, 142);
             this.groupBox_AreaConstruida.TabIndex = 12;
             this.groupBox_AreaConstruida.TabStop = false;
             this.groupBox_AreaConstruida.Text = "Área construída";
@@ -167,6 +261,7 @@
             this.comboBox4.Font = new System.Drawing.Font("Gill Sans MT", 12F);
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
+            "0",
             "100",
             "200",
             "300",
@@ -185,6 +280,7 @@
             this.comboBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox4.Size = new System.Drawing.Size(71, 31);
             this.comboBox4.TabIndex = 6;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -192,6 +288,7 @@
             this.comboBox3.Font = new System.Drawing.Font("Gill Sans MT", 12F);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
+            "0",
             "100",
             "200",
             "300",
@@ -210,6 +307,7 @@
             this.comboBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox3.Size = new System.Drawing.Size(71, 31);
             this.comboBox3.TabIndex = 5;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -242,9 +340,9 @@
             this.groupBox_Terreno.Controls.Add(this.label7);
             this.groupBox_Terreno.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.groupBox_Terreno.ForeColor = System.Drawing.Color.Khaki;
-            this.groupBox_Terreno.Location = new System.Drawing.Point(12, 462);
+            this.groupBox_Terreno.Location = new System.Drawing.Point(8, 458);
             this.groupBox_Terreno.Name = "groupBox_Terreno";
-            this.groupBox_Terreno.Size = new System.Drawing.Size(177, 142);
+            this.groupBox_Terreno.Size = new System.Drawing.Size(186, 142);
             this.groupBox_Terreno.TabIndex = 11;
             this.groupBox_Terreno.TabStop = false;
             this.groupBox_Terreno.Text = "Terreno";
@@ -275,6 +373,7 @@
             this.comboBox2.Font = new System.Drawing.Font("Gill Sans MT", 12F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
+            "0",
             "200",
             "300",
             "400",
@@ -295,6 +394,7 @@
             this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox2.Size = new System.Drawing.Size(71, 31);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -302,6 +402,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Gill Sans MT", 12F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "0",
             "200",
             "300",
             "400",
@@ -322,6 +423,7 @@
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox1.Size = new System.Drawing.Size(71, 31);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -354,9 +456,9 @@
             this.groupBox_Preco.Controls.Add(this.trackBar_ValorMinimoPreco);
             this.groupBox_Preco.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.groupBox_Preco.ForeColor = System.Drawing.Color.Khaki;
-            this.groupBox_Preco.Location = new System.Drawing.Point(12, 348);
+            this.groupBox_Preco.Location = new System.Drawing.Point(8, 344);
             this.groupBox_Preco.Name = "groupBox_Preco";
-            this.groupBox_Preco.Size = new System.Drawing.Size(432, 108);
+            this.groupBox_Preco.Size = new System.Drawing.Size(441, 108);
             this.groupBox_Preco.TabIndex = 10;
             this.groupBox_Preco.TabStop = false;
             this.groupBox_Preco.Text = "Preço";
@@ -388,7 +490,7 @@
             // 
             this.trackBar_ValorMaximoPreco.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.trackBar_ValorMaximoPreco.AutoSize = false;
-            this.trackBar_ValorMaximoPreco.Location = new System.Drawing.Point(211, 71);
+            this.trackBar_ValorMaximoPreco.Location = new System.Drawing.Point(220, 71);
             this.trackBar_ValorMaximoPreco.Maximum = 70;
             this.trackBar_ValorMaximoPreco.Name = "trackBar_ValorMaximoPreco";
             this.trackBar_ValorMaximoPreco.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -422,7 +524,7 @@
             // 
             this.trackBar_ValorMinimoPreco.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.trackBar_ValorMinimoPreco.AutoSize = false;
-            this.trackBar_ValorMinimoPreco.Location = new System.Drawing.Point(211, 33);
+            this.trackBar_ValorMinimoPreco.Location = new System.Drawing.Point(220, 33);
             this.trackBar_ValorMinimoPreco.Maximum = 70;
             this.trackBar_ValorMinimoPreco.Name = "trackBar_ValorMinimoPreco";
             this.trackBar_ValorMinimoPreco.Size = new System.Drawing.Size(210, 23);
@@ -433,12 +535,16 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 18F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(12, 89);
+            this.label1.Location = new System.Drawing.Point(8, 85);
+            this.label1.MaximumSize = new System.Drawing.Size(441, 160);
+            this.label1.MinimumSize = new System.Drawing.Size(441, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 34);
+            this.label1.Size = new System.Drawing.Size(441, 34);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtrar por:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -446,169 +552,243 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panel_Bairros);
             this.groupBox1.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.groupBox1.ForeColor = System.Drawing.Color.Khaki;
-            this.groupBox1.Location = new System.Drawing.Point(12, 126);
+            this.groupBox1.Location = new System.Drawing.Point(8, 122);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(432, 216);
+            this.groupBox1.Size = new System.Drawing.Size(441, 216);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bairro";
             // 
-            // panel1
+            // panel_Bairros
             // 
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.checkBox10);
-            this.panel1.Controls.Add(this.checkBox9);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox8);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.checkBox5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Location = new System.Drawing.Point(2, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(428, 190);
-            this.panel1.TabIndex = 10;
+            this.panel_Bairros.Controls.Add(this.Alto_Da_Boa_Vista);
+            this.panel_Bairros.Controls.Add(this.Jardim_Santo_Amaro);
+            this.panel_Bairros.Controls.Add(this.Jardim_Prudência);
+            this.panel_Bairros.Controls.Add(this.Brooklin_Velho);
+            this.panel_Bairros.Controls.Add(this.Jardim_Petrópolis);
+            this.panel_Bairros.Controls.Add(this.Chácara_Monte_Alegre);
+            this.panel_Bairros.Controls.Add(this.Jardim_Marajoara);
+            this.panel_Bairros.Controls.Add(this.Granja_Julieta);
+            this.panel_Bairros.Controls.Add(this.Jardim_Dos_Estados);
+            this.panel_Bairros.Controls.Add(this.Jardim_Cordeiro);
+            this.panel_Bairros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Bairros.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel_Bairros.Location = new System.Drawing.Point(2, 24);
+            this.panel_Bairros.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_Bairros.Name = "panel_Bairros";
+            this.panel_Bairros.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.panel_Bairros.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel_Bairros.Size = new System.Drawing.Size(437, 190);
+            this.panel_Bairros.TabIndex = 10;
             // 
-            // checkBox1
+            // Alto_Da_Boa_Vista
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox1.Location = new System.Drawing.Point(4, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(159, 31);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Alto da Boa Vista";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Alto_Da_Boa_Vista.AutoSize = true;
+            this.Alto_Da_Boa_Vista.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Alto_Da_Boa_Vista.Location = new System.Drawing.Point(4, 5);
+            this.Alto_Da_Boa_Vista.Name = "Alto_Da_Boa_Vista";
+            this.Alto_Da_Boa_Vista.Size = new System.Drawing.Size(159, 31);
+            this.Alto_Da_Boa_Vista.TabIndex = 0;
+            this.Alto_Da_Boa_Vista.Text = "Alto da Boa Vista";
+            this.Alto_Da_Boa_Vista.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // Jardim_Santo_Amaro
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox10.Location = new System.Drawing.Point(249, 153);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(180, 31);
-            this.checkBox10.TabIndex = 9;
-            this.checkBox10.Text = "Jardim Santo Amaro";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.Jardim_Santo_Amaro.AutoSize = true;
+            this.Jardim_Santo_Amaro.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Santo_Amaro.Location = new System.Drawing.Point(249, 153);
+            this.Jardim_Santo_Amaro.Name = "Jardim_Santo_Amaro";
+            this.Jardim_Santo_Amaro.Size = new System.Drawing.Size(180, 31);
+            this.Jardim_Santo_Amaro.TabIndex = 9;
+            this.Jardim_Santo_Amaro.Text = "Jardim Santo Amaro";
+            this.Jardim_Santo_Amaro.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // Jardim_Prudência
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox9.Location = new System.Drawing.Point(249, 116);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(155, 31);
-            this.checkBox9.TabIndex = 8;
-            this.checkBox9.Text = "Jardim Prudência";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.Jardim_Prudência.AutoSize = true;
+            this.Jardim_Prudência.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Prudência.Location = new System.Drawing.Point(249, 116);
+            this.Jardim_Prudência.Name = "Jardim_Prudência";
+            this.Jardim_Prudência.Size = new System.Drawing.Size(155, 31);
+            this.Jardim_Prudência.TabIndex = 8;
+            this.Jardim_Prudência.Text = "Jardim Prudência";
+            this.Jardim_Prudência.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // Brooklin_Velho
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox2.Location = new System.Drawing.Point(4, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(142, 31);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Brooklin Velho";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Brooklin_Velho.AutoSize = true;
+            this.Brooklin_Velho.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Brooklin_Velho.Location = new System.Drawing.Point(4, 42);
+            this.Brooklin_Velho.Name = "Brooklin_Velho";
+            this.Brooklin_Velho.Size = new System.Drawing.Size(142, 31);
+            this.Brooklin_Velho.TabIndex = 1;
+            this.Brooklin_Velho.Text = "Brooklin Velho";
+            this.Brooklin_Velho.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // Jardim_Petrópolis
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox8.Location = new System.Drawing.Point(249, 79);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(158, 31);
-            this.checkBox8.TabIndex = 7;
-            this.checkBox8.Text = "Jardim Petrópolis";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.Jardim_Petrópolis.AutoSize = true;
+            this.Jardim_Petrópolis.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Petrópolis.Location = new System.Drawing.Point(249, 79);
+            this.Jardim_Petrópolis.Name = "Jardim_Petrópolis";
+            this.Jardim_Petrópolis.Size = new System.Drawing.Size(158, 31);
+            this.Jardim_Petrópolis.TabIndex = 7;
+            this.Jardim_Petrópolis.Text = "Jardim Petrópolis";
+            this.Jardim_Petrópolis.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // Chácara_Monte_Alegre
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox3.Location = new System.Drawing.Point(4, 79);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(199, 31);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Chácara Monte Alegre";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Chácara_Monte_Alegre.AutoSize = true;
+            this.Chácara_Monte_Alegre.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Chácara_Monte_Alegre.Location = new System.Drawing.Point(4, 79);
+            this.Chácara_Monte_Alegre.Name = "Chácara_Monte_Alegre";
+            this.Chácara_Monte_Alegre.Size = new System.Drawing.Size(199, 31);
+            this.Chácara_Monte_Alegre.TabIndex = 2;
+            this.Chácara_Monte_Alegre.Text = "Chácara Monte Alegre";
+            this.Chácara_Monte_Alegre.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // Jardim_Marajoara
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox7.Location = new System.Drawing.Point(249, 42);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(157, 31);
-            this.checkBox7.TabIndex = 6;
-            this.checkBox7.Text = "Jardim Marajoara";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.Jardim_Marajoara.AutoSize = true;
+            this.Jardim_Marajoara.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Marajoara.Location = new System.Drawing.Point(249, 42);
+            this.Jardim_Marajoara.Name = "Jardim_Marajoara";
+            this.Jardim_Marajoara.Size = new System.Drawing.Size(157, 31);
+            this.Jardim_Marajoara.TabIndex = 6;
+            this.Jardim_Marajoara.Text = "Jardim Marajoara";
+            this.Jardim_Marajoara.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // Granja_Julieta
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox4.Location = new System.Drawing.Point(4, 116);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(130, 31);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Granja Julieta";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.Granja_Julieta.AutoSize = true;
+            this.Granja_Julieta.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Granja_Julieta.Location = new System.Drawing.Point(4, 116);
+            this.Granja_Julieta.Name = "Granja_Julieta";
+            this.Granja_Julieta.Size = new System.Drawing.Size(130, 31);
+            this.Granja_Julieta.TabIndex = 3;
+            this.Granja_Julieta.Text = "Granja Julieta";
+            this.Granja_Julieta.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // Jardim_Dos_Estados
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox6.Location = new System.Drawing.Point(249, 5);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(170, 31);
-            this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "Jardim dos Estados";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.Jardim_Dos_Estados.AutoSize = true;
+            this.Jardim_Dos_Estados.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Dos_Estados.Location = new System.Drawing.Point(249, 5);
+            this.Jardim_Dos_Estados.Name = "Jardim_Dos_Estados";
+            this.Jardim_Dos_Estados.Size = new System.Drawing.Size(170, 31);
+            this.Jardim_Dos_Estados.TabIndex = 5;
+            this.Jardim_Dos_Estados.Text = "Jardim dos Estados";
+            this.Jardim_Dos_Estados.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // Jardim_Cordeiro
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Gill Sans MT", 13F);
-            this.checkBox5.Location = new System.Drawing.Point(3, 153);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(152, 31);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Jardim Cordeiro";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.Jardim_Cordeiro.AutoSize = true;
+            this.Jardim_Cordeiro.Font = new System.Drawing.Font("Gill Sans MT", 13F);
+            this.Jardim_Cordeiro.Location = new System.Drawing.Point(3, 153);
+            this.Jardim_Cordeiro.Name = "Jardim_Cordeiro";
+            this.Jardim_Cordeiro.Size = new System.Drawing.Size(152, 31);
+            this.Jardim_Cordeiro.TabIndex = 4;
+            this.Jardim_Cordeiro.Text = "Jardim Cordeiro";
+            this.Jardim_Cordeiro.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::GerenciaDeImoveis.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(-11, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(472, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(468, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel_ListaCasas);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 122);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(672, 91);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // flowLayoutPanel_ListaCasas
+            // 
+            this.flowLayoutPanel_ListaCasas.AutoSize = true;
+            this.flowLayoutPanel_ListaCasas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel_ListaCasas.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.flowLayoutPanel_ListaCasas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel_ListaCasas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel_ListaCasas.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel_ListaCasas.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.flowLayoutPanel_ListaCasas.Name = "flowLayoutPanel_ListaCasas";
+            this.flowLayoutPanel_ListaCasas.Size = new System.Drawing.Size(672, 0);
+            this.flowLayoutPanel_ListaCasas.TabIndex = 1;
+            this.flowLayoutPanel_ListaCasas.WrapContents = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label_Pagina);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(3, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(666, 45);
+            this.panel1.TabIndex = 3;
+            // 
+            // label_Pagina
+            // 
+            this.label_Pagina.Font = new System.Drawing.Font("Gill Sans MT", 12F);
+            this.label_Pagina.Location = new System.Drawing.Point(89, 12);
+            this.label_Pagina.Name = "label_Pagina";
+            this.label_Pagina.Size = new System.Drawing.Size(488, 23);
+            this.label_Pagina.TabIndex = 2;
+            this.label_Pagina.Text = "Página 1 de 2";
+            this.label_Pagina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button4.Font = new System.Drawing.Font("Gill Sans MT", 11F);
+            this.button4.Location = new System.Drawing.Point(583, 9);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Próximo";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.Font = new System.Drawing.Font("Gill Sans MT", 11F);
+            this.button3.Location = new System.Drawing.Point(3, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 31);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Anterior";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // panel1_Busca
             // 
-            this.panel1_Busca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1_Busca.Controls.Add(this.button_Add);
             this.panel1_Busca.Controls.Add(this.flowLayoutPanel_Busca);
-            this.panel1_Busca.Location = new System.Drawing.Point(-5, 3);
+            this.panel1_Busca.Controls.Add(this.pictureBox2);
+            this.panel1_Busca.Controls.Add(this.pictureBox3);
+            this.panel1_Busca.Controls.Add(this.pictureBox4);
+            this.panel1_Busca.Controls.Add(this.pictureBox5);
+            this.panel1_Busca.Location = new System.Drawing.Point(18, 3);
             this.panel1_Busca.Name = "panel1_Busca";
-            this.panel1_Busca.Size = new System.Drawing.Size(696, 81);
+            this.panel1_Busca.Size = new System.Drawing.Size(688, 116);
             this.panel1_Busca.TabIndex = 0;
             // 
             // button_Add
@@ -623,7 +803,7 @@
             this.button_Add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Add.Location = new System.Drawing.Point(25, 6);
+            this.button_Add.Location = new System.Drawing.Point(21, 6);
             this.button_Add.Name = "button_Add";
             this.button_Add.Size = new System.Drawing.Size(91, 68);
             this.button_Add.TabIndex = 0;
@@ -633,9 +813,10 @@
             // flowLayoutPanel_Busca
             // 
             this.flowLayoutPanel_Busca.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.flowLayoutPanel_Busca.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel_Busca.Controls.Add(this.textBox_Busca);
             this.flowLayoutPanel_Busca.Controls.Add(this.button_Busca);
-            this.flowLayoutPanel_Busca.Location = new System.Drawing.Point(195, 23);
+            this.flowLayoutPanel_Busca.Location = new System.Drawing.Point(191, 23);
             this.flowLayoutPanel_Busca.Name = "flowLayoutPanel_Busca";
             this.flowLayoutPanel_Busca.Size = new System.Drawing.Size(387, 34);
             this.flowLayoutPanel_Busca.TabIndex = 3;
@@ -651,6 +832,7 @@
             // 
             // button_Busca
             // 
+            this.button_Busca.BackColor = System.Drawing.Color.Transparent;
             this.button_Busca.BackgroundImage = global::GerenciaDeImoveis.Properties.Resources.lupa;
             this.button_Busca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Busca.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -662,84 +844,69 @@
             this.button_Busca.Name = "button_Busca";
             this.button_Busca.Size = new System.Drawing.Size(41, 29);
             this.button_Busca.TabIndex = 2;
-            this.button_Busca.UseVisualStyleBackColor = true;
+            this.button_Busca.UseVisualStyleBackColor = false;
             this.button_Busca.Click += new System.EventHandler(this.button_Busca_Click);
             // 
-            // flowLayoutPanel_ListaCasas
+            // pictureBox2
             // 
-            this.flowLayoutPanel_ListaCasas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.flowLayoutPanel_ListaCasas.AutoScroll = true;
-            this.flowLayoutPanel_ListaCasas.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.flowLayoutPanel_ListaCasas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_ListaCasas.Location = new System.Drawing.Point(0, 123);
-            this.flowLayoutPanel_ListaCasas.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel_ListaCasas.Name = "flowLayoutPanel_ListaCasas";
-            this.flowLayoutPanel_ListaCasas.Size = new System.Drawing.Size(708, 637);
-            this.flowLayoutPanel_ListaCasas.TabIndex = 1;
-            this.flowLayoutPanel_ListaCasas.WrapContents = false;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::GerenciaDeImoveis.Properties.Resources.marca_daguatransparente;
+            this.pictureBox2.Location = new System.Drawing.Point(580, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(108, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
-            // groupBox2
+            // pictureBox3
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Font = new System.Drawing.Font("Gill Sans MT", 14F);
-            this.groupBox2.ForeColor = System.Drawing.Color.Khaki;
-            this.groupBox2.Location = new System.Drawing.Point(88, 610);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 76);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Estilo";
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = global::GerenciaDeImoveis.Properties.Resources.marca_daguatransparente;
+            this.pictureBox3.Location = new System.Drawing.Point(430, 23);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(108, 63);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
-            // radioButton1
+            // pictureBox4
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton1.Location = new System.Drawing.Point(37, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 31);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Térreo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::GerenciaDeImoveis.Properties.Resources.marca_daguatransparente;
+            this.pictureBox4.Location = new System.Drawing.Point(281, 23);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(108, 63);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
             // 
-            // radioButton2
+            // pictureBox5
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton2.Location = new System.Drawing.Point(150, 28);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 31);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Sobrado";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 16F);
-            this.button1.Location = new System.Drawing.Point(12, 714);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(432, 43);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Aplicar Filtros";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox5.Image = global::GerenciaDeImoveis.Properties.Resources.marca_daguatransparente;
+            this.pictureBox5.Location = new System.Drawing.Point(118, 23);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(108, 63);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 769);
+            this.ClientSize = new System.Drawing.Size(1185, 769);
             this.Controls.Add(this.splitContainerPrincipal);
             this.Name = "Home";
             this.Text = "Nakano Imóveis";
             this.splitContainerPrincipal.Panel1.ResumeLayout(false);
+            this.splitContainerPrincipal.Panel1.PerformLayout();
             this.splitContainerPrincipal.Panel2.ResumeLayout(false);
+            this.splitContainerPrincipal.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerPrincipal)).EndInit();
             this.splitContainerPrincipal.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox_AreaConstruida.ResumeLayout(false);
             this.groupBox_AreaConstruida.PerformLayout();
             this.groupBox_Terreno.ResumeLayout(false);
@@ -749,14 +916,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_ValorMaximoPreco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_ValorMinimoPreco)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_Bairros.ResumeLayout(false);
+            this.panel_Bairros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel1_Busca.ResumeLayout(false);
             this.flowLayoutPanel_Busca.ResumeLayout(false);
             this.flowLayoutPanel_Busca.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -767,22 +939,21 @@
         private System.Windows.Forms.Panel panel1_Busca;
         private System.Windows.Forms.TextBox textBox_Busca;
         private System.Windows.Forms.Button button_Busca;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_ListaCasas;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Busca;
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox Jardim_Cordeiro;
+        private System.Windows.Forms.CheckBox Granja_Julieta;
+        private System.Windows.Forms.CheckBox Chácara_Monte_Alegre;
+        private System.Windows.Forms.CheckBox Brooklin_Velho;
+        private System.Windows.Forms.CheckBox Alto_Da_Boa_Vista;
+        private System.Windows.Forms.CheckBox Jardim_Petrópolis;
+        private System.Windows.Forms.CheckBox Jardim_Marajoara;
+        private System.Windows.Forms.CheckBox Jardim_Dos_Estados;
+        private System.Windows.Forms.CheckBox Jardim_Santo_Amaro;
+        private System.Windows.Forms.CheckBox Jardim_Prudência;
         private System.Windows.Forms.GroupBox groupBox_Preco;
         private System.Windows.Forms.TrackBar trackBar_ValorMaximoPreco;
         private System.Windows.Forms.Label label3;
@@ -794,7 +965,7 @@
         private System.Windows.Forms.GroupBox groupBox_AreaConstruida;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Bairros;
         private System.Windows.Forms.TrackBar trackBar_ValorMinimoPreco;
         private System.Windows.Forms.Label label_ValorMaximoPreco;
         private System.Windows.Forms.Label label11;
@@ -809,6 +980,18 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_ListaCasas;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label_Pagina;
     }
 }
 
