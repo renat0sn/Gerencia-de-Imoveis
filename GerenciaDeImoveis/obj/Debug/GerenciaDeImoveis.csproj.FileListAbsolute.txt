@@ -7,6 +7,7 @@ C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\Geren
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.csproj.CoreCompileInputs.cache
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.exe
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.pdb
-C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Home.resources
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Add.resources
 C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Detalhes.resources
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.Home.resources
+C:\Users\Renato\source\repos\GerenciaDeImoveis\GerenciaDeImoveis\obj\Debug\GerenciaDeImoveis.ImovelBox.resources

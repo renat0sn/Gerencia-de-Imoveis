@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImovelBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImovelBox.Designer.cs">
+      <DependentUpon>ImovelBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ExtensionMethods.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Add\Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,9 @@
     <Compile Include="Model\Enums\Status.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ImovelBox.resx">
+      <DependentUpon>ImovelBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Add\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,14 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +128,8 @@
     <None Include="Resources\mais32px .png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\marca_daguaa.png" />
+    <None Include="Resources\marca_daguatransparente.png" />
     <None Include="Resources\x.png" />
     <None Include="Resources\check.png" />
     <None Include="Resources\detalhe.png" />

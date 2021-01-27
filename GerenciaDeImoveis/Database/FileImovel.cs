@@ -72,7 +72,7 @@ namespace GerenciaDeImoveis.Database
             {
                 if(!line.Equals(""))
                 {
-                    imoveis.Add(ConvertStringToImovel(line));
+                    imoveis = imoveis.Prepend(ConvertStringToImovel(line)).ToList();
                 }
             }
 
